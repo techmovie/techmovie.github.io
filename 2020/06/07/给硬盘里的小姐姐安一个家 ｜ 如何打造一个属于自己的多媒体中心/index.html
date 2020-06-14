@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>给硬盘里的小姐姐安一个家 ｜ 如何打造一个属于自己的多媒体中心 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="生命在于折腾">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?20289450">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/06/07/8b21f73c2f61e0557efe2539afb54213.png')">
+                <div class="post-title">
+                    给硬盘里的小姐姐安一个家 ｜ 如何打造一个属于自己的多媒体中心
+                    <div class="post-meta">
+                        <time datetime="2020-06-07T07:56:25.000Z" itemprop="datePublished">
+                            2020-06-07 15:56
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/NAS/'>NAS</a>, 
+                        
+                        <a href='/tags/Emby/'>Emby</a>, 
+                        
+                        <a href='/tags/Jellyfin/'>Jellyfin</a>, 
+                        
+                        <a href='/tags/Plex/'>Plex</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>如今，大家越来越习惯于观看在线视频，即便部分流媒体需要每月支付一定的费用才能享受到更加优质的服务，大家也越来越心甘情愿地支付这一部分费用，毕竟国内的大部分视频网站还是对想免费观看的这一部分用户太不友好了。</p>
+<p>但是还有这么一群人，他们没办法忍受视频网站的垃圾画质，不愿意接受动辄阉割的剧情，不想在以后的某个时间想回味一部电影，却被视频网站下架了。于是他们买了硬盘，买了NAS，把他们喜欢的视频都装进自己的硬盘。</p>
+<p>但是把硬盘塞满后，如何方便快捷地从一堆文件中找到自己想要的呢，又如何为你的文件做一个美观的可视化界面呢？</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/-2-00010fe5ef555b6851c2.png" alt=""></p>
+<h2 id="文件名很重要"><a href="#文件名很重要" class="headerlink" title="文件名很重要"></a>文件名很重要</h2><p>如果要生成上图中这样的海报，需要相应的软件对存储的电影文件进行识别（也叫做刮削，后续统称为刮削），获取到对应的电影或者电视节目的元数据，而刮削的关键就是文件的命名。</p>
+<p>首先来看两个命名的对比,大家觉得哪个命名更友好一点呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">绅士们.The.Gentlemen.2019.BD720P.中英双字.mp4</span><br><span class="line">The Gentlemen 2019 2160p UHD BluRay TrueHD 7.1 HDR x265.mkv</span><br></pre></td></tr></table></figure>
+
+<p>对于大部分的人来说，肯定第一个更友好，因为一眼看过去就知道它是个什么电影，也知道这个文件里有什么字幕。</p>
+<p>但是如果要是交给程序去识别呢？它大概率会困惑于这个 BD720P 到底是个什么鬼。</p>
+<p>那么到底应该怎么去规范地命名一个电影文件呢？文件名里的内容都是些什么意思？</p>
+<h3 id="完整的英文名"><a href="#完整的英文名" class="headerlink" title="完整的英文名"></a>完整的英文名</h3><p>一部电影或者电视节目，无论国内外都有属于自己的英文名，但是它的中文名可能千奇百怪。《WALL-E》在不同地区被翻译成了《机器人总动员》、《太空奇兵·威E》和《瓦力》。刮削工具拿到电影的名字需要去对应的网站（比如豆瓣、IMDB、TMDB）搜索电影的元数据，如果是拿这几个中文名去检索，可能一无所获。</p>
+<p>如果把命名成完整英文名，无论是从豆瓣还是其他国外网站都能快速准确地获取到对应的电影元数据。</p>
+<p>如果是电视节目，则需要在文件名后加上对应的季数和集数，而一整季的所有文件需要放到同一个文件夹下，文件夹的命名中只需要有对应季数就可以。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Rick.and.Morty.S03.1080p.BluRay.REMUX.AVC.TrueHD.5.1 （文件夹）</span><br><span class="line">Rick.and.Morty.S03E01.1080p.BluRay.REMUX.AVC.TrueHD.5.1.mkv</span><br></pre></td></tr></table></figure>
+
+<h3 id="电影发行时间"><a href="#电影发行时间" class="headerlink" title="电影发行时间"></a>电影发行时间</h3><p>很多电影都会有重名的情况，所以仅有完整的英文名还不够，还需要有电影的发行时间。<br>这个时间一般指的是电影首次公开上映的当地时间，现在很多电影会选择在流媒体首播，所以这里的时间也可以是影视剧在流媒体的首播时间。在文件命名的时候只需要写上对应的年份就可以了。</p>
+<p>其实到这里，对于电影或者电视节目的元数据获取来说已经足够了，但是之后的这几个参数还是有必要提及一下。</p>
+<h3 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h3><p>现在常见的分辨率有 720P、1080P 和 4K（2160P)，至于那个 BD720P ，大概只有国内会这么叫，所以不建议采用。因为大部分4K电影的分辨率只有 3840×2160，这个分辨率被叫做Ultra High Definition，所以文件命名中会在分辨率 2160P 后面再跟一个 <strong>UHD</strong>。</p>
+<p>伴随着 4K 同时出现的又有 HDR 和 杜比世界，所以文件命名中还需要增加一个 HDR 或者 DolbyVision 的标识。有关分辨率以及 4K 的具体介绍，可以参考我的这一篇文章<a href="https://mp.weixin.qq.com/s/tPoY7cG3lCc3ccv6AccYXg" target="_blank" rel="noopener">怎样的视频算得上「高清」？这 3 个「率」很重要</a>。</p>
+<h3 id="视频来源"><a href="#视频来源" class="headerlink" title="视频来源"></a>视频来源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The Gentlemen 2019 2160p UHD BluRay TrueHD 7.1 HDR x265.mkv</span><br></pre></td></tr></table></figure>
+
+<p>这个文件中的 <strong>BluRay</strong> 就代表着这个视频的来源，表示它是通过蓝光光碟压制而来。除了BluRay，DVD表示文件来自于电影发行的DVD光碟，HDTV的是通过视频采集的方式获取高清频道播放的资源，WEB-DL 则表示文件是从流媒体平台抓取的。稍微注意就会发现很多 Netflix 的资源都会有 WEB-DL 的标识。</p>
+<p>而这几种来源代表的是视频质量的高低，相同分辨率下 BluRay 的码率最高，视频清晰度也更好，而 DVD 支持的最高分辨率只有 480P。所以我们通过视频来源这一项就可以知道这个视频文件的质量的高低。</p>
+<h3 id="音频编码"><a href="#音频编码" class="headerlink" title="音频编码"></a>音频编码</h3><p>常见的音频编码有 DTS-HDMA、Dolby TrueHD、LPCM、DTS、AC3，其中前三种无损音频编码最大可支持到 7.1 声道。无损的音频编码可以大大提高观影的听觉体验，声音更加立体和有层次，但是需要配合对应的功放才能解码。</p>
+<h3 id="视频编码"><a href="#视频编码" class="headerlink" title="视频编码"></a>视频编码</h3><p>常见的视频编码有 H.264 和 H.265(HEVC)，H.265因为编码效率更高，也常被用在 4K 影片中。文章开头提到的文件名最后的 x265 代表的就是 H.265 编码。</p>
+<p>综上，如果文件名中这些信息都具备，那么仅仅通过一个文件名就能获取到很多有用的信息，可以很容易地挑选到适合自己的影片。最重要的是这样规范的命名对刮削器来说也相当友好，可以大大提高刮削的效率和准确度。</p>
+<h2 id="选择一款适合自己的多媒体方案"><a href="#选择一款适合自己的多媒体方案" class="headerlink" title="选择一款适合自己的多媒体方案"></a>选择一款适合自己的多媒体方案</h2><p>电影都存好了，命名也规范了，但是如何打造属于自己的多媒体中心，这就不得不提到主流的几款媒体服务器。</p>
+<p>常见的媒体服务器有 Emby、Plex、Jellyfin，这三家的共同点是他们都有一个服务端和客户端，当视频文件在各种终端设备上播放的时候，解码的工作的可以交给服务端来进行，这样就实现了在任何客户端上（比如手机和电视）都可以播放。</p>
+<p>除此之外，他们会把局域网内的文件进行刮削，配上对应的海报、简介以及演职员表，从而可以更方便地浏览文件。</p>
+<p>简单地说，通过这三款媒体服务器，你可以打造一个属于自己的 Netflix。</p>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>服务端可以负责视频的解码和影视剧的刮削，这几个媒体服务器的服务端都可以安装在NAS、Linux、Docker、或者 Windows 上，Plex支持的平台稍多一些，Jellyfin 对 Nas 的支持性一般，好在它可以通过Docker安装。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914535228563.jpg" alt="Emby server 支持平台"><span class="img-caption">Emby server 支持平台</span></p>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><p>客户端用来读取和播放服务端中的视频。这三大媒体媒体服务器的支持客户端基本上已经包含了几乎所有的电视和手机的设备，你可以随时随地在任何设备上进行观看。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914535775182.jpg" alt="Emby 支持的客户端"><span class="img-caption">Emby 支持的客户端</span></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装的步骤都大同小异，基本上照着操作文档都能很方便地完成。具体的安装步骤和设置内容网上已有很多文章已经分享过了，这里不再赘述。</p>
+<p>服务端安装完成后第一件事情是要添加电影和电视节目的目录。需要注意的是，电影和电视节目的文件目录要分开添加到对应的分类里。假如在电影的目录中添加了部分电视节目的文件，则很大可能会刮削失败。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914541095831.jpg" alt=""></p>
+<h3 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h3><p>安装完成后，可以对媒体库进行一些设置。我比较喜欢将简介和电影名称设置为中文，海报设置为英文，因为英文海报都会比较清爽，中文则会堆砌着一堆毫无意义的文字，对于有强迫症的人来说，这种海报容易引起心理不适。</p>
+<p>电影的元数据需要从第三方网站获取，元数据的来源可以选择豆瓣或者 TheMovieDB，因为国内TMDB 的连接性比较差，所以可以作为豆瓣的备选。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914548282741.jpg" alt="更喜欢哪一版的海报？"><span class="img-caption">更喜欢哪一版的海报？</span></p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914543091547.jpg" alt="媒体库的设置"><span class="img-caption">媒体库的设置</span></p>
+<h3 id="会员需要购买么"><a href="#会员需要购买么" class="headerlink" title="会员需要购买么"></a>会员需要购买么</h3><p>Plex 和 Emby 都有对应的高级版，高级版可以开启更多的功能。高级版最主要的的两个用处是客户端的播放以及硬件解码，如果是软解的话，服务端的 CPU 会承受比较大的压力。</p>
+<p>但是 Jellyfin 是完全免费的，这两个刚需也完全能够满足。</p>
+<table>
+<thead>
+<tr>
+<th align="center">订阅期限</th>
+<th align="center">Plex</th>
+<th align="center">Emby</th>
+<th align="center">Jellyfin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">每月</td>
+<td align="center">$4.99</td>
+<td align="center">$4.99</td>
+<td align="center">免费</td>
+</tr>
+<tr>
+<td align="center">每年</td>
+<td align="center">$39.99</td>
+<td align="center">$54</td>
+<td align="center">免费</td>
+</tr>
+<tr>
+<td align="center">终生</td>
+<td align="center">$119.99</td>
+<td align="center">$119</td>
+<td align="center">免费</td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>除了电影和电视节目，这三款媒体服务器还添加音乐、书籍、电视直播等各种类型的多媒体。感兴趣的可以自行探索一番。</p>
+<h2 id="我自己的多媒体播放方案"><a href="#我自己的多媒体播放方案" class="headerlink" title="我自己的多媒体播放方案"></a>我自己的多媒体播放方案</h2><p>我自己的所有媒体文件都是存放在群晖NAS里，目前用的是 Emby，服务端使用的也是群晖提供的套件进行安装。没有开通高级版，因为基本不会使用手机 APP 去观看电影。Plex 也使用过，但是服务端的一些操作对我来说不够友好，页面也比较陈旧和老土。之所以没有使用 Jellyfin 的原因是 Jellyfin 在群晖里只能通过 Docker 安装，但只能添加一个群晖的目录，对于我这种没有组 raid 的用户来说，没有办法将多个目录下所有的的媒体文件都添加到 Jellyfin 的服务端，所以最后还是忍痛选择了 Emby。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/15914587989674.jpg" alt="《三块广告牌》"><span class="img-caption">《三块广告牌》</span></p>
+<p>而在设备端，我一直在用 AppleTV 的 Infuse Pro 6。Infuse 在前段时间刚刚增加了对Emby 和 Jellyfin 的支持，在此之前它只支持 Plex。通过Infuse 播放 Emby 的媒体文件无需开通高级版，直接添加对应的 Emby 账户就可以了，视频会展示在 Infuse APP 中，通过 AppleTV 进行解码。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/07/-0001.png" alt="Infuse的电影展示页面"><span class="img-caption">Infuse的电影展示页面</span></p>
+<p>设备端除了 AppleTV 外，对这三款媒体服务器支持最好的就是 Kodi 了，只需要安装对应的插件即可进行使用，很多安卓 TV 和电视盒子上都可以通过安装 Kodi 来进行视频播放。</p>
+<h2 id="PT-可能会遇到的问题"><a href="#PT-可能会遇到的问题" class="headerlink" title="PT 可能会遇到的问题"></a>PT 可能会遇到的问题</h2><p>通过 PT 下载的文件命名足够规范，但是有些文件夹中会带一些海报和 NFO 文件。如果在设置中选择保存 NFO 和海报到本地，会导致原有的从 PT 下载的文件被覆盖导致没办法做种。</p>
+<p>在 AppleTV 支持 Emby 之前，我不想让 AppleTV 自己去下载影片的元数据，于是就让Emby生成 NFO 文件，然后 AppleTV 就会读取目录中的 NFO 文件来获取对应的影片信息。但是这样就导致刚刚提到的文件覆盖问题。</p>
+<p>好在硬链接可以解决这个问题。</p>
+<p>硬链接意味着同一个文件的多个入口，在 Linux 系统中，如果 B 文件 是 A 的硬链接，则 B 文件的命名修改不会同步到 A 文件。利用这个原理，我们可以将 PT 下载的文件硬链接到其他目录，然后把硬链接目录添加到 Emby 或者 Jellyfin 的媒体文件中。</p>
+<p>但是如果 A 所在的目录 C 有新增文件，C 目录的新增文件也需要同步更新到 B 文件所在目录 D。否则的话 Emby 在硬链接之后就无法拿到 C 目录中最近添加的文件了。</p>
+<p>可以通过这个命令解决以上问题： </p>
+<p><code>cp -r -l -u C/* D</code></p>
+<p>然后可以将这个命令加入群晖的任务计划中，定时执行就可以了。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>搭建一个多媒体中心其实是一个相当费力的一件事情，你需要购买硬件设备、安装各种软件，还要学习Linux命令，但是为了能够尽情的享受一部电影带给我的乐趣，这些折腾也都值得。</p>
+<p>也欢迎在留言区中分享你自己的折腾经历。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/06/07/%E4%B8%80%E4%B8%AA%E6%9C%88%E5%86%85%E6%88%91%E9%9D%A0%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8C%A3%E4%BA%86%E5%A4%9A%E5%B0%91%E9%92%B1%20--%20TransClient%202.0%E6%9B%B4%E6%96%B0%20/">
+        上一篇<br>一个月内我靠独立开发的小程序挣了多少钱
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/05/06/TransClient%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%9B%B4%E6%96%B0%20/">
+        下一篇<br>TransClient微信小程序更新 可以支持添加µTorrent客户端了
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?85037750"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

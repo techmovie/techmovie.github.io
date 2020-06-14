@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TransClient微信小程序更新 可以支持添加µTorrent客户端了 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="TransClient支持添加µTorrent客户端了">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?59796553">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/05/06/img6167.jpg')">
+                <div class="post-title">
+                    TransClient微信小程序更新 可以支持添加µTorrent客户端了
+                    <div class="post-meta">
+                        <time datetime="2020-05-06T10:22:57.000Z" itemprop="datePublished">
+                            2020-05-06 18:22
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/µTorrent/'>µTorrent</a>, 
+                        
+                        <a href='/tags/小程序/'>小程序</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>TransClient 上线以来，得到了很多朋友的喜欢，还给我提出了很多不错的意见，M-Team 的站长还有海盗还帮我免费宣传，真的非常感动！</p>
+<p>所有的意见我都有认真地看，希望可以短时间内把这些功能更新上去，让它更加完美。如果你对TransClient还有更多的想法，也可以加入我的 Telegram 群组 <a href="https://t.me/transclient" target="_blank" rel="noopener">https://t.me/transclient</a> 和我交流，我会尽量解决大家的问题。</p>
+<p>本来就只是一个自己的idea，做就做了，没想太多，直到看到现在这么多人使用让我突然感受到它的意义。甚至有些海外的朋友特意和我表达感谢和支持，这些都是我继续下去的动力，再次真心感谢各位。</p>
+<p>小程序上线到现在，一共发布了 5 个版本，除了解决一些 bug，还在添加下载服务器的页面增加了帮助说明，方便大家排查遇到的连接问题。</p>
+<p>昨天发布的最新版本增加了 µTorrent 的支持，如果需要在 TransClient 里添加 µTorrent，需要在 µTorrent 里打开Web UI，同时需要下载 webui.zip 安装包，放到µTorrent 根目录下，不需要解压。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/05/06/15884982850513.jpg" alt=""></p>
+<p>如果下载链接的后缀不是 .torrent，µTorrent 是不支持添加的，TransClient 对非 .torrent 后缀的的下载链接也做了兼容，同样可以添加到 µTorrent 并成功下载，欢迎大家体验。</p>
+<p>关于后续计划，有很多的想法但是又没有太多时间去一一实现，只能一步步来。下一步会增加 rTorrent 的支持，然后会增加更多对种子的操作和管理功能，等这些功能都进一步完善后，会支持局域网内客户端的支持，敬请期待吧。</p>
+<p>最后，还是感谢大家的支持，你们的喜欢是我坚持做下去的唯一动力，感谢！</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/06/07/%E7%BB%99%E7%A1%AC%E7%9B%98%E9%87%8C%E7%9A%84%E5%B0%8F%E5%A7%90%E5%A7%90%E5%AE%89%E4%B8%80%E4%B8%AA%E5%AE%B6%20%EF%BD%9C%20%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83/">
+        上一篇<br>给硬盘里的小姐姐安一个家 ｜ 如何打造一个属于自己的多媒体中心
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/05/03/%E5%AE%B6%E9%87%8C%E6%90%AD%E5%BB%BA%E4%BA%86%20NAS%20%E9%9C%80%E8%A6%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%EF%BC%9F%E8%BF%99%E5%87%A0%E4%B8%AA%E6%AD%A5%E9%AA%A4%E5%BE%88%E9%87%8D%E8%A6%81/">
+        下一篇<br>家里搭建了 NAS 需要远程访问？这几个步骤很重要
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?19736832"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

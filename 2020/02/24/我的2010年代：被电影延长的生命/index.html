@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>我的2010年代：被电影延长的生命 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="自从电影发明，人类的生命至少延长了三倍">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?11621148">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/02/24/poster.jpg')">
+                <div class="post-title">
+                    我的2010年代：被电影延长的生命
+                    <div class="post-meta">
+                        <time datetime="2020-02-24T15:09:57.000Z" itemprop="datePublished">
+                            2020-02-24 23:09
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/电影/'>电影</a>, 
+                        
+                        <a href='/tags/电视剧/'>电视剧</a>, 
+                        
+                        <a href='/tags/纪录片/'>纪录片</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>十年前的 2010 年，刚刚步入大学，之前的观影途径有 VCD/DVD、星空卫视、学校组织的集体放映，甚至于村里的露天电影我都还有模糊的印象–应该是遥远的 90 年代了。</p>
+<p>2010 年之后，电影帮我打开了另一个世界的大门。大学的时候有一门叫西方电影欣赏的选修课，在这门课上开始第一次真正接触到西方电影，《放牛班的春天》、《雨中曲》、《谍影重重》、《美丽人生》、《中央车站》这些电影都让我看得如痴如醉。有个极具人格魅力的老师跟我们说：「只要是 IMDB 7分以上的片子，你们都可以去看。」但我还是先选择了豆瓣（毕竟豆瓣上的榜单更符合国内大多数人的口味），在豆瓣上开始标记每一部我看过的电影，如今在豆瓣电影已经标记了 678 个看过。</p>
+<p>第一次听到 3D 这个词的时候我还正在读高三，当时《阿凡达》正在上映，我在收音机里听到《阿凡达》各种神乎其技的的 3D 体验，心里着急但又没有任何办法去真正体验，这种感觉着实让人抓心挠肝。2012 年，《泰坦尼克号 3D版》在国内上映，虽然很多人已经把这部电影看了很多次，但当时这部后期转制的 3D 在国内也是相当火爆，火爆到我们班里一群男生集体跑到影院里去看这部电影。这是我自己第一次到影院里看电影，也是我第一次体验到 3D，有个 Rose 差点掉到海里的镜头把我看得头晕目眩。</p>
+<p>在影院里看电影有个好处，你可以在黑暗中尽情地释放自己的情绪，更容易跟面前这片流动着光影的屏幕中的角色一起感受喜怒哀乐，一起经历一个完全不一样的人生。同时也有个坏处，当片尾字幕出现，影院灯光打开，很多时候是很难从电影中抽离出来的，碰到那种失落又无望的结局，需要在座位上呆坐很久才能缓过来。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/p2402150318.jpg" alt="看完《海边的曼彻斯特》久久不能从主角的痛苦中抽离出来"><span class="img-caption">看完《海边的曼彻斯特》久久不能从主角的痛苦中抽离出来</span></p>
+<p>有了这个第一次的影院观影经历，我从此便一发不可收拾。虽然当时上学的自己生活不太宽裕，但每次碰到自己期待的电影，都会赶到影院里先睹为快。到现在我都还有印象深刻的电影，比如黄渤的《杀生》、时隔多年重见天日的《无人区》、李安的《少年派的奇幻漂流》、王全安《白鹿原》。时至今日，我依然觉得 《少年派的奇幻漂流》（《阿凡达》我没赶上） 是我看过的 3D 效果做的最用心效果最好的一部电影。到现在快十年过去了，各种大片的 3D 效果没有一点点进步，各种粗制滥造的 3D 电影依旧在影院里畅行无阻。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/20200223160935.jpg" alt="看完期待已久的《白鹿原》后很失望"><span class="img-caption">看完期待已久的《白鹿原》后很失望</span></p>
+<p>这么多年的观影经历，国外那些长期盘踞在各大榜单的经典片子不必多说，说几个近些年对我影响比较大的国外电影。爱情电影中我最喜欢《乌云背后的幸福线》和《时空恋旅人》，喜欢这两个是因为从电影中能看到我自己的影子。《时空恋旅人》中男主跟刚刚还在熟睡的女朋友求婚后，女朋友说：「感谢你没有把求婚搞的很戏剧性，一群人围着的那种」。我听到这句话，差点流泪，我以为所有的女生都会喜欢那种惹人注目的浪漫。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/f2f48eb0eba94986aea74f012bf9ab1c.png" alt="男主还偷偷把一支街边乐队请回家里"><span class="img-caption">男主还偷偷把一支街边乐队请回家里</span></p>
+<p>另一部对我影响最大的电影是《白日梦想家》，我在 14 年看完的这部电影，5 年后，我去了这部电影的拍摄地、第一次出国、第一次跟另一个国家的人交流，电影里的这句激励人心的话「To see the world, things dangerous to come to. To see behind walls, to draw closer. To find each other and to feel. That is the purpose of life.」，我确确实实也做到了。</p>
+<p>看了很多国外电影后，我又把视线转向了国内，发现国内电影有太多太多的珍宝，有两位对我影响最大的导演：贾樟柯和郝杰。</p>
+<p>我跟贾樟柯都是山西人，第一次看他的电影就是《小武》。在看这部电影之前我没看过任何一部这种风格的电影。电影的场景和我生活过的九十年代甚至于00年代都相差无几，尤其是电影里的山西话让我倍感亲切，小武在电影里的局促和尴尬也丝毫看不出表演的痕迹，一切都自然的像一部纪录片。从此我就爱上了贾樟柯。</p>
+<p>原定于 2013 年上映的《天注定》历经各种波折，最终还是无法在国内上映，贾樟柯在一部纪录片中说他可能没办法在继续拍下去了，空间太小了。但他转身又拍出了豆瓣 7.9 分的《山河故人》以及豆瓣 7.6 分的《江湖儿女》。我在一篇《江湖儿女》的影评中写到：「每次看完贾樟柯的电影，心情都很复杂。最吸引我的还是写实的风格、各种生活化的场景、主演背后形形色色的人–有人在打牌有人在抽烟还有人在摸着自家的小狗。生活里没有那么多的起承转合，也没有那么多的反转和高潮，更多的还是贾樟柯电影里诸如小武之类的普通人。科长的电影一直都在记录这些影像和故事，这是我们国内很多电影都做不到的事情。」</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/a79f3943ff584f96b968e382e8eb0ac2.jpg" alt="《山河故人》这一幕让人泪目"><span class="img-caption">《山河故人》这一幕让人泪目</span></p>
+<p>说到郝杰，很多人都对他的《光棍儿》很熟悉，这部影片粗糙、大胆、魅力无穷，我们看到了另外一个世界的生活。因为郝杰是张家口人，电影多是在张家口拍的，张家口当地的方言又跟我们县城的方言相差无几，当我第一次在看他的片子的时候，感受到的也是亲切和有生活气息。后来郝杰又拍了《美姐》和《我的青春期》（原名《我的春梦》），我都第一时间去电影院看了，因为如果他的电影不趁刚上映的时候看，晚一点就没有任何排片了。我特别喜欢《美姐》，我家乡的很多人也喜欢听电影里提到的二人台，我想如果把这部电影放给这些人看，他们也一定会喜欢。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/527e06019084347029ad0c3de9e34933.jpg" alt="那一年我最喜欢的一张电影海报"><span class="img-caption">那一年我最喜欢的一张电影海报</span></p>
+<p>当然，还有很多优秀但很多人不了解的国产电影，比如最近几年的《村戏》、《爆裂无声》、《不成问题的问题》、《一个勺子》，希望这些电影可以在日后被更多的人欣赏和喜欢。</p>
+<h2 id="纪录片"><a href="#纪录片" class="headerlink" title="纪录片"></a>纪录片</h2><p>除了国内的电影，国内还有很多优秀的纪录片。国内众多的人口也就意味着更多的故事，而很多故事又是没有办法在电影院中看到的，而纪录片独有真实和荒诞带给你的震撼远比电影强烈。</p>
+<p>我不反感诸如《舌尖上的中国》或者《我在故宫修文物》之类的纪录片，但我更喜欢的是忠实记录这个时代以及这个时代普通个体的纪录片，通过这些记录片，你能确确实实感受到活着的力量。在这些纪录片中，周浩和徐童是我最敬畏的两个导演。</p>
+<p>周浩的镜头对准了这个社会的每个细节，他拍过工人、农民、医生、警察、毒贩、高考生、官员，把这个时代的真实面目都展现在我们面前。每一个参加过高考的人都应该看一遍周浩的《高三》，想了解一个市长或者书记生活，去看《书记》和《大同》，如果想了解一个吸毒者有多么悲惨，就去看《龙哥》。</p>
+<p>徐童的作品对准的都是底层社会的边缘人群，或许我们认为自己已经够底层了，每个月要被各种账单压的喘不过气，殊不知真正底层的人还在为了能吃一顿饱饭而发愁。看了徐童的《算命》后，我久久缓不过神来。历百程是一个残疾的算命先生，他的老婆是傻聋哑瘸的石珍珠。光这一句对他们的介绍，我都觉得生活对他们太残忍了，可是他们比我们大多数人都活得都有生命力。通过徐童的镜头，我们能看到一个个更加真实和有感染力的中国人，而不是一些人所谓的社会黑暗面。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/aa01c3f8bd05d8fab4586d160106c6c2.jpg" alt="历百程和石珍珠"><span class="img-caption">历百程和石珍珠</span></p>
+<p>此外，《四个春天》、《少年·小赵》、《犴达罕》、《挖眼睛》等等独立制作的纪录片也同样优秀，推荐给大家。如今，越来越多的记录片进入了影院，虽然票房一般，但能进入电影院这已经是一件相当令人欣慰的事情了。</p>
+<h2 id="电视剧"><a href="#电视剧" class="headerlink" title="电视剧"></a>电视剧</h2><p>国内的电视剧中，在10年代看过的很少很少，2009年的两部电视剧《我的团长我的团》和《潜伏》是我的最爱。《我的团长我的团》是《士兵突击》的原班人马拍摄的有关远征军的故事，用豆瓣网友楞莲凌赖的话说：「 这部剧不仅让你知道中国为什么被逼的差点亡国，同时也告诉了你，中国为什么打成那样都没有亡国。」它是一部沉重又深刻电视剧，我曾经看着它的原著把某一页的纸打湿了，无论电视剧和书你看过一遍之后都不敢再看第二遍，因为它无所顾忌地将血淋淋的事实摆在我们面前，戳着每一位的心。主角龙文章在这部剧里如是说：「我想让事情是他本来的样子。」</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/p2184243717.jpg" alt="车上躺着的是团长龙文章"><span class="img-caption">车上躺着的是团长龙文章</span></p>
+<p>国外的电视剧中，我看的大多是都和大家一样，比如《生活大爆炸》、《绝命毒师》、《黑镜》这些热门的英剧或者美剧。但我一直想推荐给所有人的两部美剧，一部是豆瓣平均分 9 分的《废柴联盟》以及另一部接近满分的《瑞克和莫蒂》。这两部美剧都有同一个编剧 Dan Harmon，虽然这两部美剧风格迥异，但他们爆棚的想象力和折腾程度我觉得已经超越了所有其他的美剧，看完后的感觉就一个字：爽！</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/24/083fbdeb30d5b8276bdcb8d678bec060.png" alt="《瑞克和莫蒂》里也有不少的诸如此类的警世恒言"><span class="img-caption">《瑞克和莫蒂》里也有不少的诸如此类的警世恒言</span></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我一直觉得在荧幕前观看这些影视剧的最大的快乐在于能够体验到不同的人生，悲惨的、幸福的、疯狂的、荒谬的，如果把里面的主角都想像成平行世界的自己，就如同杨德昌在《一一》里所说，我们的生命至少延长了三倍。</p>
+<p>注：本文参与少数派2019年度正文，属“我的2010年代清单”赛道</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/04/18/%E8%8A%B1%E4%BA%86%E4%B8%80%E4%B8%AA%E6%9C%88%E6%97%B6%E9%97%B4%EF%BC%8C%E6%88%91%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+        上一篇<br>花了一个月时间，我写了一个远程管理下载上传的小程序
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/02/22/%E6%B5%81%E6%B0%B4%E8%B4%A6%E3%80%8D%E5%9C%A8%E5%8C%97%E4%BA%AC%E5%88%B0%E5%85%AC%E5%8F%B8%E5%A4%8D%E5%B7%A5%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/">
+        下一篇<br>「流水账」在北京到公司复工的第一天
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?97405642"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

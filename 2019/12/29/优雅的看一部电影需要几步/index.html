@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>优雅的看一部电影需要几步 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="打开电视，坐上沙发">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?91157287">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/%E5%B0%81%E9%9D%A21.jpg')">
+                <div class="post-title">
+                    优雅的看一部电影需要几步
+                    <div class="post-meta">
+                        <time datetime="2019-12-29T12:05:12.000Z" itemprop="datePublished">
+                            2019-12-29 20:05
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/电影/'>电影</a>, 
+                        
+                        <a href='/tags/流媒体/'>流媒体</a>, 
+                        
+                        <a href='/tags/群晖/'>群晖</a>, 
+                        
+                        <a href='/tags/4K/'>4K</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <blockquote>
+<p>本文首发于我的公众号<strong>iTechMovie</strong>,欢迎关注！原文链接：<a href="https://mp.weixin.qq.com/s/nU40A7Y7gsQMBYxbD58hZA" target="_blank" rel="noopener">优雅的看一部电影需要几步</a></p>
+</blockquote>
+<p>不知不觉已经到了而立之年，如果还有人问我有什么兴趣爱好的话，我想到的也就是电影了。虽然一直保持着到电影院看电影的习惯，但大部分想看的电影还是没办法在国内的影院看到。电影看的多了，对画质也越来越挑剔，如果没有一套足够完美的播放设备，总觉得自己一直追求的画质有点虚无缥缈。所以，今年在换了个稍微宽敞点的地方后，一通折腾，总算有了一个还算满意的看电影的环境。</p>
+<h2 id="电影从哪里来"><a href="#电影从哪里来" class="headerlink" title="电影从哪里来"></a>电影从哪里来</h2><p>大部分电影是通过PT（Private Tracker）下载的，这些网站里电影的来源是电影在上映一段时间后发行的蓝光碟，所以最大程度上保证了视频的清晰度。因为PT在国内生存环境比较恶劣，各个站点都尽可能的保持低调，所以就不多说了。</p>
+<p>除了PT,还订购了几个流媒体。几个知名的流媒体中，Netflix除了国内的网络环境不能访问外，无论资源丰富度、资源质量、对中文用户的友好程度，都是最好的那一个。Netflix如果从阿根廷或土耳其订购最实惠，家庭套餐平均下来一个月一个人只有15块钱，然后就可以免广告享受到最高支持4K 杜比视界的所有电影和电视剧。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/netflix.jpg" alt=""></p>
+<p>Apple TV+是苹果今年刚推出的流媒体服务，Apple TV+目前资源只有几部而已，但是都有中文字幕，国内的网络环境也可以随意观看。但唯一觉得不太爽的就是剧集周更，而且高质量的剧也没几部，比较热门的《早间新闻》追了几集也弃掉了。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/atv.jpg" alt=""></p>
+<p>迪斯尼今年也推出了自己的流媒体服务Disney+，涵盖了迪斯尼、皮克斯以及漫威几乎所有的剧集和电影，但是国内用户来几乎无福消受:没中文字幕而且只能美国原生ip观看。Disney+刚推出的时候新用户有七天的试用期，试用了一下，体验一般，不会再订购了。</p>
+<p>如果在国内视频网站（除了B站）看电影看剧，我觉得还是比较奢侈的一件事情，因为你即便花了钱也享受不到应有的服务，VIP用户除了被硬塞广告，还要忍受各种花式收割。远的不说，就比如最近《庆余年》的种种操作，已经是在给VIP用户喂💩吃了。</p>
+<h2 id="电影放在哪里"><a href="#电影放在哪里" class="headerlink" title="电影放在哪里"></a>电影放在哪里</h2><p>对于特别喜欢的电影我都有收藏的习惯，空闲的时候会时不时回味一下。收藏的越来越多，怎么更加方便的管理和观看就成了一个问题。后来了解到NAS，也叫家庭私有云，就入手了群晖的入门款两盘位的218j。后来因为存储空间和性能还是有点跟不上，就直接入手了四盘位的918+。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/918.jpg" alt=""></p>
+<p>群晖主要用它的两个功能，下载和备份。除了本身自带的套件downloadStation，还可以安装Transmission和qBittorrent这类PT支持的下载软件，下载很容易达到宽带的速度上限，联通300M的宽带，下载最高可以到40MB/s。如果配合上远程控制，在路上开始下载一部40G左右的蓝光原盘，到家的时候就可以打开看了。</p>
+<p>除了下载，电脑系统和手机照片还可以很方便的备份到群晖。此外，群晖还支持各种网盘的同步，如果觉得一些重要文件存储在本地还不保险可以再同步到网盘里多一层保障。</p>
+<h2 id="如何流畅的看电影"><a href="#如何流畅的看电影" class="headerlink" title="如何流畅的看电影"></a>如何流畅的看电影</h2><p>群晖支持多种文件协议，无论是在电脑还是手机上，都可以在局域网内很方便地访问群晖里的文件。但是，如果文件过大，局域网的带宽就成了瓶颈。</p>
+<p>假设一部4K电影原盘的码率是80Mbps,则代表每秒钟传输的图像大小是10MB，如果在局域网内播放，即便抛开声音的传输速率不谈，下载速度也至少需要10MB/s，如果在一个百兆路由器架设的局域网内是无法流畅的播放这部4K电影的，所以就需要一个千兆路由器——理论上最大传输速度可以达到125MB/s。而且现在运营商提供的带宽基本都在100M开外，所以如果不买一个靠谱的千兆路由器是没有办法发挥出百兆带宽的优势的。</p>
+<p>于是在看了油管某位博主的推荐之后入手了一个华硕的AC68U，刷了梅林系统主要用来局域网内设备去广告。现在用了两年多的时间一直都很稳定，是我这几年用过的最超值的电子产品之一。后来又买过斐讯的K2p用来双拨，体验也很不错，不过后来对双拨没需求了，现在也被闲置了。</p>
+<h2 id="用什么设备来看电影"><a href="#用什么设备来看电影" class="headerlink" title="用什么设备来看电影"></a>用什么设备来看电影</h2><p>用电脑和显示器都看过，前几个月前淘了一个TCL的外贸机R625，支持4K HDR 以及杜比视界。电视自带Roku系统，最高支持到Youtube 4K HDR以及Netflix的4K 杜比视界。因为不是安卓系统，所以与国内视频APP基本无缘。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/roku.jpg" alt="电视自带的Roku TV"><span class="img-caption">电视自带的Roku TV</span></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/4k.jpg" alt="Youtube 4K"><span class="img-caption">Youtube 4K</span></p>
+<p>电视播放在线视频还算可以，但是本地视频播放和解码就有点吃力了。所以就需要一个兼顾网络视频点播的本地视频播放机。看了一些评测，就入手了支持4K HDR的芝杜z9s。它可以把NAS里的电影和电视剧精准识别然后进行归纳整理，配上电影海报和简介。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/zhi-du.png" alt=""></p>
+<p>刚开始上手的时候还是比较兴奋的，被人吹捧的海报墙的归类和刮削识别都深得我心。但用的时间久了，发现海报墙的bug也最多，而且入手了之后才发现芝杜没办法支持ASS本地字幕。这一点我有点没办法接受。因为是自带安卓系统，所以可以安装一些国内的视频APP。我可能会时不时的看一些国内的综艺节目，这也是我一直没把它转手卖掉的原因。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/harry.jpg" alt="芝杜海报墙"><span class="img-caption">芝杜海报墙</span></p>
+<p>后来，又看到有人推荐Apple TV 4K，又耐不住手痒剁手了。ATV 4K是苹果17年推出的电视盒子，最高可以支持4K 杜比视界。也正是因为了买了它，所以苹果11月推出的TV+送了我一年的免费试用。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/atv4k.jpg" alt=""></p>
+<p>在线视频方面，苹果自身的iTunes的片源库已经足够丰富了，而且最近几年新出的片子都自带杜比视界。但如果要想看这些片子的话还是需要花费不少的，每部片子大约要20刀左右。Netflix也可以支持到4K 杜比视界，但是Youtube最高只能支持到1080P，因为苹果不支持Google自家的VP9编码。</p>
+<p>本地视频方面，因为ATV没有提供硬盘接口，所以买之前如果没有一台NAS，买它其实没有多大的意义。有了NAS还必须配合一款Infuse的APP来进行解码播放。它也提供了海报墙的功能，不过本地播放的视频最高只能支持到4K HDR，不支持杜比视界。因为它刮削到的电影海报和简介的可编辑性太差了，而且国内的的一些电视剧Infuse还是没有办法识别，所以我电影用了Emby，电视剧用了Plex来进行刮削，最后的效果还是很满意的。这两个软件都可以在NAS里安装对应的套件，以后有关ATV的使用还可以详细的说一下。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/posters.jpg" alt="Infuse的海报墙"><span class="img-caption">Infuse的海报墙</span></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/madmax.jpg" alt="海报详情"><span class="img-caption">海报详情</span></p>
+<p>我自己这套方案可能不适合所有人，每个人的喜好也不一样，也不是每个人都乐于折腾，所以原谅我最开始的标题党，以上内容，仅供参考。</p>
+<p>最后，希望也爱电影的你永远年轻。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2019/12/29/%E5%A6%82%E4%BD%95%E7%AD%96%E5%88%92%E4%B8%80%E5%9C%BA%E3%80%8C%E8%AF%B4%E8%B5%B0%E5%B0%B1%E8%B5%B0%E3%80%8D%E7%9A%84%E5%86%B0%E5%B2%9B%E6%97%85%E8%A1%8C/">
+        上一篇<br>如何策划一场「说走就走」的冰岛旅行
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2019/12/29/%E6%80%8E%E6%A0%B7%E7%9A%84%E8%A7%86%E9%A2%91%E7%AE%97%E5%BE%97%E4%B8%8A%E3%80%8C%E9%AB%98%E6%B8%85%E3%80%8D%EF%BC%9F%E8%BF%99%203%20%E4%B8%AA%E3%80%8C%E7%8E%87%E3%80%8D%E5%BE%88%E9%87%8D%E8%A6%81/">
+        下一篇<br>怎样的视频算得上「高清」？这 3 个「率」很重要
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?78760841"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

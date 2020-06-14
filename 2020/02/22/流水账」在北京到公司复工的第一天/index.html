@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>「流水账」在北京到公司复工的第一天 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="年后在家远程办公了两周后，公司通知这一周要到公司上班。迫于无奈，请了三天年假在家又远程办公了三天后，还是极不情愿的去公司了。
+早上骑车去地铁，路上没看到别的电动车，机动车倒是和以前一样不停地在我旁边呼啸而过，路上也有没戴口罩的大爷大妈悠然的走在路上。路边一个经常聚集了四五个...">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?68291095">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/02/22/IMG_5906.jpg')">
+                <div class="post-title">
+                    「流水账」在北京到公司复工的第一天
+                    <div class="post-meta">
+                        <time datetime="2020-02-22T04:10:30.000Z" itemprop="datePublished">
+                            2020-02-22 12:10
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/生活/'>生活</a>, 
+                        
+                        <a href='/tags/肺炎/'>肺炎</a>, 
+                        
+                        <a href='/tags/复工/'>复工</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>年后在家远程办公了两周后，公司通知这一周要到公司上班。迫于无奈，请了三天年假在家又远程办公了三天后，还是极不情愿的去公司了。</p>
+<p>早上骑车去地铁，路上没看到别的电动车，机动车倒是和以前一样不停地在我旁边呼啸而过，路上也有没戴口罩的大爷大妈悠然的走在路上。路边一个经常聚集了四五个老大爷的象棋摊居然也恢复了营业，有些地方可是一家人打个麻将都要被砸桌子的。</p>
+<p>到了地铁站的非机动车停车场，往常这个时间点都停地满满当当，今天居然在入口附近就停好了我的电驴。进入地铁，除了一个出站的，我没看到其他人和我一起进入地铁。安检的人戴着护目镜测一次体温，但是过书包的安检仪有没有消毒我就不清楚了。</p>
+<p>地铁车厢的人寥寥无几，一个人可以坐一排，我在过年期间也没有见过北京有这样的场景。到这个时候我才意识到，我可能是万中无一的必须到公司的开工锦鲤。虽然有座，但我还是选择站着，换乘爬楼的时候我也尽量选择步行楼梯。<br><img src="http://nas.bjchina.top:10000/images/2020/02/22/IMG_5908.jpg" alt=""></p>
+<p>到了公司大楼，测了两次体温，一次脖子一次手腕，都是34度。测温的物业不甘心，又让我撸起袖子测了一次，35度。这样如此离谱的测温有啥意义。</p>
+<p>进入公司，我又被测了一次温，贴心的保安大哥给了我洗手液。到了工位上发现我桌子上还有我一个年前戴过的一个口罩，那个时候我还不知道这个口罩是N95的，被我随手丢在一边。现在不一样了，我把它收进抽屉，准备再用一段时间。</p>
+<p>中午吃了统一配送到办公楼的一家饭店的饭，简直难以下咽，躲在一间小会议室里草草吃了几口就扔掉了。我决定从此还是点外卖或者自带吧。</p>
+<p>口罩戴到这个时候，我已经有点难受了。耳朵疼，胸闷气短，总想摘下口罩用力呼吸几口。下午公司发了口罩，换上后耳朵更疼了。每隔一段时间我得整理一下口罩，让耳朵放松下。手头的工作就这样被不停的打断。好不容易到了下班时间，我此刻只想赶紧回家，痛快的呼吸。</p>
+<p>回去的路上看到当当复工有员工感染的新闻，希望我们不会成为下一个当当。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/02/24/%E6%88%91%E7%9A%842010%E5%B9%B4%E4%BB%A3%EF%BC%9A%E8%A2%AB%E7%94%B5%E5%BD%B1%E5%BB%B6%E9%95%BF%E7%9A%84%E7%94%9F%E5%91%BD/">
+        上一篇<br>我的2010年代：被电影延长的生命
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/02/17/2020%20%E5%B9%B4%E4%BA%86%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8C%E8%93%9D%E5%85%89%E3%80%8D%E8%BF%98%E8%AE%A9%E5%BD%B1%E8%BF%B7%E5%BF%83%E9%A9%B0%E7%A5%9E%E5%BE%80%EF%BC%9F/">
+        下一篇<br>2020 年了，为什么「蓝光」还让影迷心驰神往？
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?38204350"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

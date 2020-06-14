@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>怎样的视频算得上「高清」？这 3 个「率」很重要 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="你可能一直看的是假高清">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?75978289">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://mweb-1258898299.cos.ap-beijing.myqcloud.com/%E5%B0%81%E9%9D%A2.jpg')">
+                <div class="post-title">
+                    怎样的视频算得上「高清」？这 3 个「率」很重要
+                    <div class="post-meta">
+                        <time datetime="2019-12-29T10:57:31.000Z" itemprop="datePublished">
+                            2019-12-29 18:57
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/电影/'>电影</a>, 
+                        
+                        <a href='/tags/蓝光/'>蓝光</a>, 
+                        
+                        <a href='/tags/4K/'>4K</a>, 
+                        
+                        <a href='/tags/高清/'>高清</a>, 
+                        
+                        <a href='/tags/分辨率/'>分辨率</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <blockquote>
+<p>本文最先发布于我的个人微信公众号「iTechMovie」（movieteclife），原文链接： <a href="https://mp.weixin.qq.com/s/tPoY7cG3lCc3ccv6AccYXg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/tPoY7cG3lCc3ccv6AccYXg</a></p>
+</blockquote>
+<p>当我们在谈论一个电影是不是高清的时候，究竟是在谈论什么？</p>
+<h2 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h2><p>分辨率指的是显示的像素有多少，分辨率越高代表影像质量越好，越能表现出视频中更多的细节，文件大小也越大。</p>
+<p>现在常见的分辨率有720P(1280 × 720个像素)，1080P（1920 ×1080个像素）4K（3840 × 2160）。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/resolutionillustration.png" alt=""></p>
+<h3 id="1080i-1080P-4K是什么鬼"><a href="#1080i-1080P-4K是什么鬼" class="headerlink" title="1080i/1080P/4K是什么鬼"></a>1080i/1080P/4K是什么鬼</h3><p>如果要讲清楚这几个概念，还要从电视的<strong>隔行扫描</strong>（interlaced scan）和<strong>逐行扫描</strong>（Progressive scan）说起。以前的CRT电视机的工作原理是电子束在屏幕上一行行扫描后发光来显示图像的，在信号传输过程中为了节省带宽，分奇数行和偶数行两次扫描。现在的电视虽然都已经是逐行扫描了，但是大部分的电视信号依然是隔行扫描，也就是说每次传输的图像信号只有一半。假设电视的分辨率为1920×1080,则有1080个扫描行，每次传输的图像只占了一半的扫描行。之所以人眼看不出只有半张图片，是因为人眼的视觉暂留帮我们把两个半张图片拼接成了一张完整的图片。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/ge-xing-sao-miao.gif" alt="隔行扫描 来源:  http://youtu.be/H_o5h5SK_70"><span class="img-caption">隔行扫描 来源:  http://youtu.be/H_o5h5SK_70</span></p>
+<p>高清电视信号的传输有1080i和720P，之所以没有1080P，还是因为传输带宽的问题。在一些体育比赛直播中，如果用隔行扫描比如1080i进行传输，因为体育比赛的画面基本都在高速移动，两次隔行扫描得到的图像差异过大，在进行拼接的时候已经拼接不上了，所以就出现了重影和错位。体育比赛观看的分辨率推荐720P，虽然在分辨率上做了牺牲，但是每一帧的图像都是完整的，不会影响观看。如果非要给这三个排序的话，我觉得应该是1080P&gt;720P&gt;1080i。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/1080i-vs-720p.jpg" alt="高速运动中1080i和720P的区别 来源：https://youtu.be/Avvh0iH2xSg"><span class="img-caption">高速运动中1080i和720P的区别 来源：https://youtu.be/Avvh0iH2xSg</span></p>
+<p>然后再说4K中的K，K代表着横向像素中大约有多少列，1K就是1024，4K就是4096。所以1920×1080就是1.9K或2K，3840×2160是电视标准的4K，4096×2160也是4K。常说的4K，2K都没有固定的分辨率，只看横向像素。</p>
+<p>综上，P和i都代表着竖向像素的行数，K代表着横向像素列数。我们所说的高清视频至少要达到1080i才及格。到此，我们可以开始谈谈电影了。</p>
+<h3 id="VCD与DVD"><a href="#VCD与DVD" class="headerlink" title="VCD与DVD"></a>VCD与DVD</h3><p>在使用MPEG2标准的DVD大行其道的年代，受限于这种编码技术，DVD的分辨率只有720×480，但是已经比之前VCD的分辨率320×240提高了四倍多，而且VCD非常容易损坏不易保存，相信很多看过VCD的人都经历过全屏马赛克的情况。所以VCD在国内经历过一段时间的野蛮生长后退出了历史舞台。</p>
+<p>DVD根据数据内容层的层数又分为了两大类：DVD-5和DVD-9。一部DVD-5的容量只有4.7G左右，DVD-9的容量最多只能有8.5G。DVD-9虽然能容纳更多内容，但是分辨率依然是720×480。很多以前的电影和电视剧看不到画质很好的版本，是因为他们只发行了DVD。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/luo-ye-gui-gen.jpg" alt="《落叶归根》的DVD导航"><span class="img-caption">《落叶归根》的DVD导航</span></p>
+<h4 id="蓝光可能不是你想象中的那个"><a href="#蓝光可能不是你想象中的那个" class="headerlink" title="蓝光可能不是你想象中的那个"></a>蓝光可能不是你想象中的那个</h4><p>很多人可能在国内视频网站上听过这个蓝光这个名字，但其实这是视频网站挂羊头卖狗肉，提供的视频质量也跟真正的蓝光相差甚远。</p>
+<p>蓝光光碟（Blu-ray Disc）其实是DVD之后的下一代光盘格式，简称蓝光。被叫做这个名字是因为蓝光光碟用的是蓝色激光束进行读写操作。中间有几年的时间还曾经存在另一种叫做HD DVD的光盘格式跟蓝光争夺天下，但是在2008年之后，HD DVD最终败下阵来，蓝光一统天下。</p>
+<p>容量方面，跟DVD5和DVD9相对应，单面单层的蓝光光碟容量为25G，单面双层的容量为50G。在各大好莱坞电影公司纷纷推出蓝光光碟之后，一部电影的容量最高可以达到40G左右，分辨率达到了1920×1080（1080P），至此，我们才得以看到真正高清的电影。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/burnbluraywithblurayburningsoftware0.png" alt="BD25和BD50"><span class="img-caption">BD25和BD50</span></p>
+<p>由于蓝光光碟的巨大容量，画面细节相对于DVD丰富了很多，沉浸感也更好，只有沉浸其中，这样才能真正感受到电影的魅力。你不会希望在观影过程中突然冒出个马赛克扰了心情。相信我，体验了高清之后你就再也忍受不了任何枪版或者其他低清晰度的电影了。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/a-gan-zheng-chuan.jpg" alt="《阿甘正传》的蓝光导航菜单"><span class="img-caption">《阿甘正传》的蓝光导航菜单</span></p>
+<p>但是也正是因为容量过大，没有足够的空间存储，另外多年前的网速如果要拖一部蓝光原盘可能要几天时间，所以需要在保证视频质量的前提下尽量缩小体积。在2008之后国内外出现了很多压制组，他们会对蓝光光碟的内容进行重新编码缩小体积，最常见的编码技术是H264，也叫AVC、MPEG-4。压制完成的视频有1080P和720P，这种小体积高质量的视频也同样适合收藏和观看。我们现在看到的大部分视频都是在蓝光的基础的上进行压制的，各大资源网站提供的最新电影都是搬自国内外这些压制组。</p>
+<p>下面这两张对比图能看出区别么？（网站可能对图片有压缩，文章中的对比图可以关注我的公众号<strong>iTechMovie</strong>回复<strong>对比图</strong>获取原图）</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/source.png" alt="蓝光源"><span class="img-caption">蓝光源</span></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/encode.png" alt="压制后"><span class="img-caption">压制后</span></p>
+<h3 id="为什么码率很重要"><a href="#为什么码率很重要" class="headerlink" title="为什么码率很重要"></a>为什么码率很重要</h3><p>码率的意思是单位时间内传输数据的位数，用kbps表示。基本的算法是：码率(kbps)=文件大小(KB) * 8 / 时间(秒)。假设一部两个小时的BD50蓝光电影的视频容量为35G，则码率为</p>
+<p><code>35×1024×1024×8/2/3600=40777kbps=41Mbps</code></p>
+<p>如果同一部电影的分辨率相同，码率不一样，也会影响画面的质量。因为码率越高，单位时间内传输的画面信息也就越丰富。</p>
+<p>谈到码率就不得不谈到流媒体。流媒体是不用下载打开就可以直接观看的服务商。国内的三大视频网站，国外比较知名的Netflix、hulu、Amazon Prime Video和Youtube，都可以算作流媒体。如果国外的这些流媒体都能进入中国，也就没三大视频网站什么事了。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/jie-ping20191219xia-wu93216.png" alt="Netflix未提供服务的地区仅剩4个"><span class="img-caption">Netflix未提供服务的地区仅剩4个</span></p>
+<p>既然都是在线视频，如果要流畅地观看，网络条件就要够好。如果视频体积过大，势必会影响加载的速度。所以流媒体提供商就在视频的码率上做文章，在分辨率一样的情况下，通过压缩视频减小码率，牺牲一点画质从而减小体积，优化视频加载的体验。</p>
+<p>一部电影在影院下映一段时间后，首先会上线流媒体，然后会发行蓝光原盘。就像前面说的，流媒体中的视频码率相对比较低，所以很多画面细节跟蓝光原盘比还是有差距的。而且流媒体对网络的依赖性很高，流媒体大多会根据当前的网络速度来自动调整播放的分辨率，如果自己的网络在高峰期比较卡顿，那就很影响观影体验了。</p>
+<p>比如下面这个对比图中，画面主人公的面部蓝光源更加清晰，左边流媒体源的画面中帽子男的衣服褶皱消失了，右边裙子女的面部细节要比左边更丰富一些。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/amazonvsbluray.png" alt=""></p>
+<h3 id="帧率又是什么"><a href="#帧率又是什么" class="headerlink" title="帧率又是什么"></a>帧率又是什么</h3><p>帧率指的是每秒显示的帧数。由于人类眼睛的特殊生理结构，如果所看画面的帧率高于每秒约10至12帧的时候，就会认为是连贯的。所以如果将这么多帧的图片放在一秒内播放完成，人眼所感受到的画面就是连续的。</p>
+<p>从有声电影诞生的1926年到今天，99%的电影依然是24帧。只有霍比特人和李安的两部最新电影进行了更高帧率的尝试，《比利林恩的中场战事》和《双子杀手》都达到了惊人的120帧。帧数如果不高，会导致高速运动的物体看起来不连贯或者重影。帧数越高，再配合上更高的分辨率，人眼看到的电影画面也就越接近真实世界。比如下图60帧版本中火车快速通过的时候还能看到坐在火车里的乘客。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/24fps.jpg" alt="《双子杀手》低帧率"><span class="img-caption">《双子杀手》低帧率</span></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/60fps.jpg" alt="《双子杀手》高帧率"><span class="img-caption">《双子杀手》高帧率</span></p>
+<h3 id="4K时代"><a href="#4K时代" class="headerlink" title="4K时代"></a>4K时代</h3><p>前面提到过4K，横向像素要达到1024的4倍。之所以要单独拿出来说，是因为4K里面的猫腻太多了。</p>
+<p>比较常见的3840×2160其实不算真正的4K，因为4K的横向像素要达到4096，这个分辨率被叫做Ultra High Definition，简称UHD，但是电视界经常把这个分辨率标为4K来误导消费者。4096×2160是数字电影的4K标准，但是根据画幅比例的不同又衍生出了很多分辨率，4096×2160的画幅比例是1.90:1，4K的《双子杀手》画幅比例为1.85 : 1，分辨率应为3996 × 2160。观众能在电影院欣赏到的4K电影少之又少，我只在今年《双子杀手》上映的时候去CINITY影院体验到了4K120帧，所以大家现在对分辨率是UHD还是4K也就没那么在意了，都统统称为4K。</p>
+<p>在2015年之后，蓝光原盘开始支持4K高清内容，新标准称为Ultra HD Blu-ray，新规格的碟片有双层66GB和三层100GB两种。4K蓝光原盘影片的压制采用H.265/HEVC高效率编码格式，能达到H.264两倍的压缩率， 分辨率为3840 x 2160，帧率最高能达到60FPS。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/1080p-vs-4k.jpg" alt="1080P vs 4K 来源：https://youtu.be/QlO_lOUwK14"><span class="img-caption">1080P vs 4K 来源：https://youtu.be/QlO_lOUwK14</span></p>
+<p>4K蓝光影片的的画面信息内容是1080的4倍，影片细节更加丰富和生动。伴随4K蓝光影片的HDR（高动态范围成像）可以使呈现的色彩更加生动，最亮和最暗画面的对比度更加分明，画面中的物体也更加真实，画面颜色过渡更加自然，带给用户视觉上的冲击也更大。HDR的标准有HDR10和杜比视界，仅这两个概念又能讲上一整集，在这里就不赘述了，直接上对比图。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/sdr-vs-hdr-1.jpg" alt=""></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/sdr-vs-hdr-2.jpg" alt="来源：https://youtu.be/H49VFZfWiag"><span class="img-caption">来源：https://youtu.be/H49VFZfWiag</span></p>
+<p>4K蓝光影片的头号劲敌就是诸如Netflix之类的流媒体，后者也推出了很多4K内容，观看起来也更加方便。不过跟1080P一样，流媒体中的4K码率比4K蓝光碟的码率要低不少。所以，流媒体或者4K蓝光原盘，就看自己的选择了。</p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>为了讲明白这些东西，查了很多很多的资料和视频，希望我的这些功夫都没有白费，能够帮助到大家，更加享受电影带来的快乐。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2019/12/29/%E4%BC%98%E9%9B%85%E7%9A%84%E7%9C%8B%E4%B8%80%E9%83%A8%E7%94%B5%E5%BD%B1%E9%9C%80%E8%A6%81%E5%87%A0%E6%AD%A5/">
+        上一篇<br>优雅的看一部电影需要几步
+    </a>
+    
+    <span class="page-number"></span>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?95221029"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>家里搭建了 NAS 需要远程访问？这几个步骤很重要 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="NAS 一般都安装在家里，如果出门在外应该如何远程访问家里的 NAS 呢？">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?67257344">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/05/04/NAS3.jpg')">
+                <div class="post-title">
+                    家里搭建了 NAS 需要远程访问？这几个步骤很重要
+                    <div class="post-meta">
+                        <time datetime="2020-05-03T16:10:28.000Z" itemprop="datePublished">
+                            2020-05-04 00:10
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/群晖/'>群晖</a>, 
+                        
+                        <a href='/tags/NAS/'>NAS</a>, 
+                        
+                        <a href='/tags/DDNS/'>DDNS</a>, 
+                        
+                        <a href='/tags/远程/'>远程</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>如今网盘的使用成本越来越高，更多的人选择搭建自己的家庭 NAS 服务器。</p>
+<p>NAS 可以用来做大容量存储、文件备份、文件下载、相册同步，甚至可以搭建网站、搭建自己的笔记以及邮件服务。</p>
+<p>NAS 一般都安装在家里，如果出门在外应该如何远程访问家里的 NAS 呢？</p>
+<h2 id="公网IP"><a href="#公网IP" class="headerlink" title="公网IP"></a>公网IP</h2><p>公网 IP 意味着它是世界上独一无二的一个IP。如果电脑有一个公网 IP，可以通过这个 IP 直接连接到这台电脑。在进行 P2P 下载时，也能连接到更多的公网 IP，从而获得可观的下载速度。可以这么说，如果没有一个公网 IP，不算真正地连接到互联网。</p>
+<p>为什么移动宽带比另外两家便宜地离谱？不是因为移动良心，而是因为装了移动宽带你也只是在移动的内网里玩。公网 IP？不存在的。</p>
+<p>所以在确定自己有没有公网IP前，如果你是移动宽带而且还没有分配 IPV6 地址，还想要外网访问NAS，只能选择类似 QuickConnect、花生壳之类的服务了。</p>
+<p>如何确定自己是否拥有公网 IP 呢？</p>
+<p>首先到自己的路由器管理后台，查看自己的 WAN IP， 然后到 <a href="https://ip.cn/" target="_blank" rel="noopener">https://ip.cn/</a> 查询自己网络的出口 IP，如果两个 IP 一致，则为公网 IP。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/WechatIMG1705.jpg" alt=""></p>
+<p>一般电信或者联通都会分配公网 IP，但如果通过上述方法查的的两个 IP 还是不一致，可以打电话给宽带的客服投诉，一般情况下都会给的。</p>
+<p>但是即便有了这个公网IP，这个 IP 也不是固定的，毕竟全世界的 IPV4 地址已经分配完毕，每人一个固定 IP 根本不可能，我们已经不能要求更多了。</p>
+<p>直接访问IP的方式显然不能完美解决随时随地访问 NAS 的需求，这个时候就需要用到 DDNS。</p>
+<h2 id="DDNS"><a href="#DDNS" class="headerlink" title="DDNS"></a>DDNS</h2><p>DDNS（Dynamic Domain Name Server）的全称是动态域名服务，可以将动态 IP 映射到一个固定的域名解析服务上。设置好 DDNS 后，就不用关心 IP 地址的变化，直接访问绑定好的固定域名就可以了。</p>
+<p>现在路由器一般都提供了免费的 DDNS 服务，可以直接在路由器管理后台绑定域名。华硕的 DDNS 可以选择「<a href="http://www.asus.com」这个免费的服务器，只需要在主机名称里填入一个子域名就可以了。" target="_blank" rel="noopener">www.asus.com」这个免费的服务器，只需要在主机名称里填入一个子域名就可以了。</a></p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503114006.jpg" alt=""></p>
+<p>群晖也提供了类似的服务，可以通过「系统面板 -&gt; 外部访问 -&gt; DDNS」 进行设置。</p>
+<p>点击「新增」按钮，服务提供商选择 Synology，主机名称一栏填入一个没有被占用子域名，主域名可以选择默认的 synology.me，也可以选择其他域名，勾选同意条款后点击确定就设置成功了。其他 NAS 的设置跟群晖类似，就不一一演示了。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503110518.jpg" alt=""></p>
+<h2 id="DNSPod-域名解析"><a href="#DNSPod-域名解析" class="headerlink" title="DNSPod 域名解析"></a>DNSPod 域名解析</h2><p>如果不想用路由器或者 NAS 提供的免费域名，可以申请一个属于自己的域名。</p>
+<p>域名可以到阿里云或者腾讯云购买得到，可以选择一些没有意义但又好记的域名，便宜的一年只需要 9 块钱就可以搞定。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/15884372905674.jpg" alt=""></p>
+<p>如果是在阿里云购买的的域名，需要将域名的 DNS 修改为 DNSPod 的服务器：</p>
+<p><code>f1g1ns1.dnspod.net
+ f1g1ns2.dnspod.net</code></p>
+<p> <img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503114734.jpg" alt=""></p>
+<p>进入 DNSPod 的域名控制台 <a href="https://console.dnspod.cn/dns/list" target="_blank" rel="noopener">https://console.dnspod.cn/dns/list</a>，添加刚刚购买的域名。</p>
+<p><img src="media/15884291543116/20200503115900.png" alt=""></p>
+<p>添加完毕后点击域名，添加一条解析记录。主机记录为域名的前缀，记录类型为 A，记录值为要绑定的 IP，这里指的是宽带的公网 IP，点击确认后保存。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503120858.jpg" alt=""></p>
+<p>前面提到宽带的公网 IP 不是固定的，所以需要定时检查宽带的 IP，然后映射到 DNSPod 绑定的域名。这就需要在 DNSPod 上新建一个密钥。</p>
+<p>点击 DNSPod 右上角的头像，点击安全设置，进入密钥管理，然后创建密钥。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503121427.jpg" alt=""></p>
+<p>创建完毕后，将 ID 和 Token 保存下来。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503121452.jpg" alt=""></p>
+<p>然后到群晖的外网设置里新增一个 DDNS。服务提供商选择 DNSPod.cn,主机名称填入刚才增加的域名记录，用户名和密码填入上一步保存的 ID 和 Token。填入之后可以点击测试联机，测试通过后就可以点击确定保存了。至此，宽带的 IP 已经成功映射到购买的域名上了，之后可以通过域名加端口访问家里局域网内任意一台设备了。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/fullsizeoutput_1.jpg" alt=""></p>
+<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><p>在局域网内运行的设备，外网是不能访问的，这个时候就需要做端口转发。比如路由器的的后台管理地址为 192.168.1.1，端口为默认的 80，如果要在外网访问家里的这台路由器就要将192.168.1.1 的 80 端口转发到公网 IP 的任意一个端口上。由于国内宽带的 80 和 8080 端口都被封了，所以要转发到其他端口。</p>
+<p>端口转发的设置一般在路由器内就可以完成，华硕的端口转发可以如下设置。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/05/04/20200503154901.jpg" alt=""></p>
+<p>上图的设置里我把 NAS 的 5000 端口以及 NAS 里安装的 Transmission 的 9091 都转发出来了，这样就可以通过 DDNS 那一步里设置的解析域名加端口号来访问这两个服务了。在使用微信小程序 TransClient 远程控制这个 Transmission 的时候。需要填入这个解析域名以及 转发出去的 9091 端口号，就可以成功在手机上远程管理 Transmission 了。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/05/06/TransClient%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%9B%B4%E6%96%B0%20/">
+        上一篇<br>TransClient微信小程序更新 可以支持添加µTorrent客户端了
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/04/18/%E8%8A%B1%E4%BA%86%E4%B8%80%E4%B8%AA%E6%9C%88%E6%97%B6%E9%97%B4%EF%BC%8C%E6%88%91%E5%86%99%E4%BA%86%E4%B8%80%E4%B8%AA%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+        下一篇<br>花了一个月时间，我写了一个远程管理下载上传的小程序
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?78607241"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

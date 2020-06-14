@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>如何策划一场「说走就走」的冰岛旅行 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="一场《白日梦想家》主题游">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?11947938">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/29/%E9%B2%B8%E9%B1%BC.jpg')">
+                <div class="post-title">
+                    如何策划一场「说走就走」的冰岛旅行
+                    <div class="post-meta">
+                        <time datetime="2019-12-29T12:10:48.000Z" itemprop="datePublished">
+                            2019-12-29 20:10
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/冰岛/'>冰岛</a>, 
+                        
+                        <a href='/tags/旅行/'>旅行</a>, 
+                        
+                        <a href='/tags/观鲸鱼/'>观鲸鱼</a>, 
+                        
+                        <a href='/tags/白日梦想家/'>白日梦想家</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <h1 id=""><a href="#" class="headerlink" title=""></a></h1><blockquote>
+<p>本文首发于我的公众号iTechMovie,欢迎关注！原文链接：<a href="https://mp.weixin.qq.com/s/BEBflrGzYEBHn-rQJJHXNQ" target="_blank" rel="noopener">如何策划一场「说走就走」的冰岛旅行</a></p>
+</blockquote>
+<p>2013年，看完<strong>《白日梦想家》</strong>这部电影后心情很激动，电影里有句至今印象深刻的slogan:<br>TO SEE THE WORLD, THINGS DANGEROUS TO COME TO, TO SEE BEHIND WALLS, TO DRAW CLOSER, TO FIND EACH OTHER AND TO FEEL.<br><strong>THAT IS THE PURPOSE OF LIFE</strong>。</p>
+<p>翻译过来是：<strong>认识世界，克服困难；洞悉所有，贴近生活；寻找真爱，感受彼此，这就是生活的意义</strong>。当时我怎么也没想到我会和主人公一样白日梦变成现实,踏上那片最接近外星的土地–「<strong>冰岛</strong>」。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/de-re.jpg" alt="仿佛置身外星"><span class="img-caption">仿佛置身外星</span></p>
+<h2 id="确定行程"><a href="#确定行程" class="headerlink" title="确定行程"></a>确定行程</h2><p>从2018年10月份萌生了去冰岛的想法之后，就开始了长达半年多的筹备。</p>
+<p>首先确定下来的是大概的出行日期：<strong>六月份的端午加周末再加上几个工作日一共有十天左右</strong>。这个时间点去的话不至于太冷，所有的景点都开放，而且也不是旅游高峰期。</p>
+<p>确定完大概的出行时间，就需要确定具体每天的行程。我想把电影在冰岛的取景地都去一遍，就谷歌了几个大概的地方，搜的过程中看到网站上有旅游定制的服务。抱着试一试的心态，就联系了几家定制旅行服务商做了行程规划，但是做出来的效果我觉得挺差强人意的。名义上是定制但不是私人定制，就是用他们的模版加加减减做的一个非常平淡无奇的行程规划。想去的几个电影中的地方都被他们忽略了，所以最后决定自己来做行程。</p>
+<p>首先需要找到<strong>电影取景地</strong>的地理位置，因为大部分的取景地都不是冰岛的旅游景点，有些地名都没有，所以就需要精确到<strong>具体的经纬度</strong>。幸运的是有人已经在马蜂窝上把大部分的取景地总结出来了，我所做的就是把这些点标记整理好。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/zi-xing-che.jpg" alt="1号公路沿途上的一幕"><span class="img-caption">1号公路沿途上的一幕</span></p>
+<p>这一部分工作是用<strong>谷歌地图</strong>来做的。谷歌地图实在是太好用了！中文支持、街景、地点标记、景点评分，附近搜索，你需要的功能它都有。像冰岛这种人烟稀少的地方，在公路上即使有一块不起眼的可以临时停车的地方，也能很容易在地图上找到！尤其在冰岛的路上开车的时候，这些功能真的可以救命。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/gu-ge-de-tu.png" alt="环岛一圈需要去的地方"><span class="img-caption">环岛一圈需要去的地方</span></p>
+<p>最终标出的这些点中，<strong>有冰岛必去的景点</strong>，<strong>也有《白日梦想家》的取景地</strong>。有了这些标记出来的点，就可以确定每个点之间需要花费的时间，再算上景点逗留和吃饭休息的时间，每天的大概行程基本就会出来了。</p>
+<p>但是冰岛这个国家人太少了，最大的城市首都雷克雅未克的人口估计都不及中国的一个县。出了首都就更是人烟稀少了，住宿和吃饭的地方少之又少。所以每天的行程的终点都要把住宿、吃饭以及超市这些地方考虑进去。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/xiao-wu.jpg" alt="电影中的一个路边小屋"><span class="img-caption">电影中的一个路边小屋</span></p>
+<h2 id="食宿"><a href="#食宿" class="headerlink" title="食宿"></a>食宿</h2><p>设计出<strong>爱彼迎</strong>的产品经理真的是人类之光，两个远隔万里互不相识的人因为一场旅行产生联系，每次想起来都觉得奇妙。</p>
+<p>选择爱彼迎的原因也是一样，<strong>宾馆太少太贵了</strong>。确定每天行程的时候，因为不知道哪里算是一个有点人烟的小镇，就只能在爱彼迎上看房子的地理位置，然后选一个自己满意的，同时也把当天的终点定为当地的小镇。有些民宿虽然照片上看着一般，本来不抱太大希望，但是入住之后给了我们太多的惊喜。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/nong-chang.jpg" alt="一个农场旁边的民宿，早上起来拍到的温馨一幕"><span class="img-caption">一个农场旁边的民宿，早上起来拍到的温馨一幕</span></p>
+<p>除了民宿，还用了<strong>Booking</strong>来订酒店，Booking可以选择立即付款或到店付款，有些酒店到店付款的价格会比立即付款高一些。最后还是选择了<strong>到店付款</strong>，中间如果有变故也可以<strong>随时免费取消</strong>。</p>
+<p>吃饭的地方都是在<strong>TripAdvisor</strong>上找的，很多餐馆里也都会贴着TripAdvisor的Logo（类似于国内的大众点评）。首都雷克雅未克的选择比较多，剩下的地方都是一些小镇，餐厅就少的可怜了。在冰岛吃一顿饭还是相当奢侈的，简餐也需要人均200。买过最便宜的东西是可口可乐，二十块钱。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/can-guan.jpg" alt="《白日梦想家》曾在这个餐馆取景"><span class="img-caption">《白日梦想家》曾在这个餐馆取景</span></p>
+<h2 id="交通"><a href="#交通" class="headerlink" title="交通"></a>交通</h2><p><strong>行程定下来了之后，就可以预定机票了。</strong>考虑到出发和回来的飞机的时间点，预订了芬兰航空AY086/AY993的飞机，飞行加上转机大约要花<strong>14个小时</strong>。</p>
+<p>因为首都雷克雅未克的国际机场离市区很远，所以预订完机票后还需要额外<strong>订购接送机</strong>。如果有经验或者英文好的可以到<a href="https://www.re.is/tour/flybus/" target="_blank" rel="noopener">https://www.re.is/tour/flybus/</a>自己预订，也可以找国内的一些代理商来预订，我们最后选择的后者，如果在那边遇到问题能找代理商帮忙联系解决（结果我们也确实遇到了很严重的问题，就是航班取消，呵呵你没听错，因为这个我们最后在雷市多停留了2天）。</p>
+<p><strong>Guide To Iceland</strong>是一个相当不错的网站，各种攻略信息都很全。但在上面找了一圈租车信息之后都觉得有点贵，又看了一些马蜂窝上的攻略后选了<strong>租租车</strong>。租租车也是代理商，Hertz、AVIS都是比较大的租车行，最后图便宜选了个比较小的<strong>Triffty</strong>，在机场里只有一个小小的柜台。车子选择了<strong>马自达的CX3</strong>。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/454c0c7d711a469b8032ff4f1dc2e84b.jpg" alt="454C0C7D-711A-469B-8032-FF4F1DC2E84B"><span class="img-caption">454C0C7D-711A-469B-8032-FF4F1DC2E84B</span></p>
+<p>虽然预订网站和各种攻略里都说如果驾照不满一年是不能在冰岛自驾的，但在提车的时候跟柜员确认了很多次之后，发现原来我这个驾照刚拿不到半年的新手也是可以开车上路的。</p>
+<p>冰岛驾车有个很特殊的地方就是<strong>要买各种保险</strong>，因为冰岛的路况和天气很复杂，如果车子有损坏，恰好又没有车险，是一定会大出血到心悸的。碰撞险、碎石险和防沙险是几个比较重要的保险。我们除了买了这几个保险，还买了一个国内的补充险。</p>
+<p>除了这些，还要<strong>学习冰岛的交通规则、办理驾照翻译证件、下载导航软件、买车载手机支架、找沿途的加油站，</strong>事无巨细。</p>
+<h2 id="景点门票"><a href="#景点门票" class="headerlink" title="景点门票"></a>景点门票</h2><p>门票支出也是花销挺大的一块，为了图省事，在确定好心愿单之后，我们还是直接找了国内的代理商来订购，到了冰岛之后也出了不少状况，代理商的客服也帮了很多忙。但在一次跟酒店前台的交流过程中，发现如果直接去这些旅游项目的官网直接购票，<strong>可以便宜不少</strong>。所以在前期准备的时候，如果有精力，建议还是直接去当地的英文官网直接购买。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/guan-jing.png" alt="在这家网站上订购的观鲸之旅看到了地球史上最大的动物--蓝鲸"><span class="img-caption">在这家网站上订购的观鲸之旅看到了地球史上最大的动物--蓝鲸</span> </p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/lan-jing.jpg" alt=""></p>
+<h2 id="签证"><a href="#签证" class="headerlink" title="签证"></a>签证</h2><p>签证办理只能在<strong>出发前3个月</strong>才能开始递交材料，把材料整理好之后找的携程的签证服务，里面只包含材料的整理，<strong>送签需要自己去</strong>。签证的办理过程很顺利，一个星期左右的时间就拿到了签证。但是切记，去办理签证的时候<strong>千万不要购买的他们推荐的所谓VIP和拍照服务</strong>！我就被狠狠坑了一笔。照片我们提前都准备好了，他们就是一口咬定你头部显示区域不够大，大概看我们是护照白本，容易好骗。</p>
+<p>签证涉及到一个行程单的材料，这个我一定要推荐一下<strong>穷游网</strong>，他们网站提供的的功能简直太完美了。你可以把每天吃喝玩乐的所有事项都加在行程单里，最后导出行程单的时候除了<strong>可以导出送签专用行程单</strong>，还可以导出一份精美的PDF，出去的时候带着这本PDF就足够了。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2019/12/25/qiong-you.png" alt=""></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>其实到签证办完这一步之后，也就没什么需要操心的大事情了。但是还有很多很多的东西需要在出发前一个月进行准备。</p>
+<p>这么多东西中，我觉得最重要的两样东西去哪里都不能少：<strong>护照和机票的复印件</strong>。这两样东西的原件如果在国外丢了，真的就是走投无路了。而且复印件要分开装在不同的地方，防止行李也一起丢了。</p>
+<p>剩下的就是些杂七杂八但是又必须要准备的东西，比如类似<strong>国外电话卡、充电宝、转换插头、防水相机包、防水冲锋衣、雨衣、毛线帽子</strong>等等这样的小物件。这些东西基本都是在某宝买的，最后在整理清点的时候最好列一个<strong>Todo List</strong>，以防遗漏。虽然在出发前自我感觉这些工作已经做的足够细致了，但是到了自驾的时候才发现车载手机支架居然没买，因为这件东西最后吃了不少苦。</p>
+<p>不过最后，我们还是推着两个28寸的行李箱按时出发了。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>虽然我分享的这些经验根本没办法做到随时随地说走就走，但是做了这么多准备工作之后，至少不会在最后说走就走的那天手忙脚乱。我觉得旅行的时候少为琐事操心专心享受旅行的过程，才是旅行最大的意义。</p>
+<p>PS：后续会和大家分享下这次冰岛《白日梦想家》主题行的游记！有很多我们拍的好玩的照片，也会写一些景点要注意的小tips，敬请期待。</p>
+<p>PPS：关注公众号，回复「行程单」获取我自己整理和穷游导出的两份行程单。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2019/12/29/%E5%B2%81%E6%9C%AB%E7%9B%98%E7%82%B9%E4%B9%8B2019%E5%B9%B4%E8%B4%AD%E4%B9%B0%E8%BF%87%E7%9A%84%E8%AE%A2%E9%98%85%E6%9C%8D%E5%8A%A1/">
+        上一篇<br>岁末盘点之2019年购买过的订阅服务
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2019/12/29/%E4%BC%98%E9%9B%85%E7%9A%84%E7%9C%8B%E4%B8%80%E9%83%A8%E7%94%B5%E5%BD%B1%E9%9C%80%E8%A6%81%E5%87%A0%E6%AD%A5/">
+        下一篇<br>优雅的看一部电影需要几步
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?43840726"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

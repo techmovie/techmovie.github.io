@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>「蓝光碟影」这个月你将能看到这些热门电影 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="有你期待的电影么">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?103174">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/01/05/1.jpg')">
+                <div class="post-title">
+                    「蓝光碟影」这个月你将能看到这些热门电影
+                    <div class="post-meta">
+                        <time datetime="2020-01-05T15:03:37.000Z" itemprop="datePublished">
+                            2020-01-05 23:03
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/电影/'>电影</a>, 
+                        
+                        <a href='/tags/蓝光/'>蓝光</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>每个月都会有上映过的电影发行蓝光碟，有些还会同时发行4K蓝光碟，有关蓝光和4K的概念可以参考<a href="https://mp.weixin.qq.com/s/tPoY7cG3lCc3ccv6AccYXg" target="_blank" rel="noopener">电影要怎么样才算高清</a>。</p>
+<p>一般在蓝光发行前半个月左右网上就会流出对应的高清资源，接下来盘点下这个月即将能看到的热度比较高的一些片子。</p>
+<h2 id="灯塔"><a href="#灯塔" class="headerlink" title="灯塔"></a>灯塔</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/The-Lighthouse.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月7日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 7.4</p>
+</blockquote>
+<p>《灯塔》是一部简单又不同寻常的电影，黑白画面，1.19 : 1的画幅，很容易让观众沉浸到电影中，与主角一起共同感受岛上的孤独和疯狂。</p>
+<h2 id="大腕"><a href="#大腕" class="headerlink" title="大腕"></a>大腕</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/602046f42570e6af04dc41d690da2b5a.jpg" alt=""></p>
+<blockquote>
+<p>发行时间： 1月8日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 中国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 7.8</p>
+</blockquote>
+<p>碟影传媒旗下的口碑商业电影及独立电影蓝光品牌MLIFE将会在本月的八号发行独家修复的经典华语电影——冯小刚导演的贺岁喜剧《大腕》。蓝光版将会比公映版多出三分钟的内容，以及特别制作精彩花絮和74页的纪念版画册。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/01/05/72685224c68bfc5645ad0441fdcdb2e0.jpg" alt="大腕效果图"><span class="img-caption">大腕效果图</span></p>
+<p>以下简介取自碟影传媒官博。</p>
+<blockquote>
+<p>本片讲述了原电影制片厂下岗摄影师尤优为好莱坞大腕级导演泰勒操办葬礼的荒诞故事，《大腕》延续了冯氏贺岁喜剧的各种鲜明风格，在当年位列内地年度票房排行榜第二名，影片看似是一部娱乐性十足的贺岁电影，但强烈的黑色幽默色彩也让本片与前几部贺岁片显得有所不同，通过主人公为好莱坞大导演操办葬礼的故事，展现了那个时代各种奇特的文化乱象和社会经济发展所产生的泡沫，片中大量的反讽广告无孔不入，如可笑可乐、报丧鸟、三六等泛滥成灾，演艺圈内为了追逐名利不择手段，猖狂的盗版现象和知识产权问题，辛辣的讽刺让我们在嬉笑之后也陷入了深沉的反思，冯导在其独特的京味幽默中透露出自己作为文化工作者的社会责任感以及对于社会发展虚症的忧虑。</p>
+</blockquote>
+<h2 id="飞驰人生"><a href="#飞驰人生" class="headerlink" title="飞驰人生"></a>飞驰人生</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/392c191845cccf4a61ebc04db553bc68.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月8日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 中国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 6.9</p>
+</blockquote>
+<p>跟《大腕》一样，也是碟影传媒独家发行的正版蓝光碟。蓝光碟收录了一些精彩花絮和5张收藏版人物卡片。</p>
+<p>除了这两部影片，碟影还会在3月份左右发行《哪吒》的正版蓝光碟，如果能抢到，我会在公众号<strong>抽奖免费送出</strong>，敬请期待吧。</p>
+<h2 id="沉睡魔咒2"><a href="#沉睡魔咒2" class="headerlink" title="沉睡魔咒2"></a>沉睡魔咒2</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/2.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月14日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>：美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P、4K</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 6.2</p>
+</blockquote>
+<p>这个系列唯一能吸引我的恐怕只有安吉丽娜朱莉了吧。</p>
+<h2 id="双子杀手"><a href="#双子杀手" class="headerlink" title="双子杀手"></a>双子杀手</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/6492038ceb1f23e7315181134a5d78fb.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月14日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P、4K</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 7.0</p>
+</blockquote>
+<p>这是李安的第二部 4K/3D/120 帧规格的电影，虽然在上映的时候口碑一般，票房也差强人意，但我还是很佩服导演李安，他有足够的胆量去对数字电影进行颠覆和创新，带给了观众前所未有的体验。不管这种尝试会不会在今后掀起高帧率高分辨率电影的潮流，李安都会是电影史上不会让人遗忘的一个孤独的探路者。</p>
+<p>说回这部电影的蓝光，4K蓝光碟的帧率为60帧，普通蓝光碟的帧率依旧是24帧。如果没能在电影院体验到4K120帧，能体验下蓝光的4K60帧也很不错。蓝光碟同时收录了近一个小时的拍摄花絮，很值得一看。</p>
+<h2 id="痛苦与荣耀"><a href="#痛苦与荣耀" class="headerlink" title="痛苦与荣耀"></a>痛苦与荣耀</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/70fdb56493bde56f53476b3abcc0c075.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月21日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 8.6</p>
+</blockquote>
+<p>本片讲述了一个处于晚年的电影导演的生活故事。在法国《电影手册》刚刚公布的2019十佳电影中，《痛苦与荣耀》位列第六。这部电影在2019年也入围了戛纳电影节主竞赛单元，在即将举行的第77届金球奖也获得了最佳男主角提名，同时在豆瓣了获得了8.6的高分，很值得一看。</p>
+<h2 id="丧尸乐园2"><a href="#丧尸乐园2" class="headerlink" title="丧尸乐园2"></a>丧尸乐园2</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/23f0a5eb1f1f2ac36.jpg" alt="丧尸乐园2"><span class="img-caption">丧尸乐园2</span></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月21日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P、4K</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 7.0</p>
+</blockquote>
+<p>十年之前，《丧尸乐园》上映后好评如潮，获得了烂番茄89%的惊人好评率。十年之后，白宫沦陷，四位大咖再续前缘，一起升级打怪。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/01/05/3b85144ef861f6313edd062ff27c4795.gif" alt="哥伦比亚女神也打起了僵尸"><span class="img-caption">哥伦比亚女神也打起了僵尸</span></p>
+<h2 id="终结者：黑暗命运"><a href="#终结者：黑暗命运" class="headerlink" title="终结者：黑暗命运"></a>终结者：黑暗命运</h2><p><img src="http://nas.bjchina.top:10000/images/2020/01/05/77910c473ee60402bfcf858f04a21ce6.jpg" alt=""></p>
+<blockquote>
+<p><strong>发行时间</strong>： 1月28日</p>
+</blockquote>
+<blockquote>
+<p><strong>发行地区</strong>： 美国</p>
+</blockquote>
+<blockquote>
+<p><strong>分辨率</strong>： 1080P、4K</p>
+</blockquote>
+<blockquote>
+<p><strong>豆瓣评分</strong>： 7.1</p>
+</blockquote>
+<p>这部电影发生在《终结者2：审判日》的27年后。詹姆斯·卡梅隆回归，担任编剧和监制，老朋友施瓦辛格也参演了本片，在电影里戏份也不少。如果你想看一部酣畅淋漓的爽片，这部终结者不容错过。</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/02/17/2020%20%E5%B9%B4%E4%BA%86%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8C%E8%93%9D%E5%85%89%E3%80%8D%E8%BF%98%E8%AE%A9%E5%BD%B1%E8%BF%B7%E5%BF%83%E9%A9%B0%E7%A5%9E%E5%BE%80%EF%BC%9F/">
+        上一篇<br>2020 年了，为什么「蓝光」还让影迷心驰神往？
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/02/%E5%B2%81%E6%9C%AB%E7%9B%98%E7%82%B9%E4%B9%8B2019%E5%B9%B4%E8%B4%AD%E4%B9%B0%E8%BF%87%E7%9A%84%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81/">
+        下一篇<br>岁末盘点之2019年购买过的电子产品
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?30596564"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

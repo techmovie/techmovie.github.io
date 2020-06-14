@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>一个月内我靠独立开发的小程序挣了多少钱 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="TransClient 2.0更新">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?14142508">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/06/07/33e4b4ce1986332332dc73ed2e98f03d.jpg')">
+                <div class="post-title">
+                    一个月内我靠独立开发的小程序挣了多少钱
+                    <div class="post-meta">
+                        <time datetime="2020-06-07T07:58:42.000Z" itemprop="datePublished">
+                            2020-06-07 15:58
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/小程序/'>小程序</a>, 
+                        
+                        <a href='/tags/TransClient/'>TransClient</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>好久不见。离上次发文又过去了一个月。这一个月的空闲时间里基本都在对 TransClient 进行迭代更新，所以公众号的文章一拖再拖，实在抱歉。</p>
+<h2 id="TransClient-2-0发布了！"><a href="#TransClient-2-0发布了！" class="headerlink" title="TransClient 2.0发布了！"></a>TransClient 2.0发布了！</h2><p>最近几天小程序更新了版本 2.0，增加了µTorrent、rTorrent(Rutorrent)和群晖 DownloadStation 这三款下载客户端的支持，从一开始的 3 款客户端增加到现在的 6 款，以后暂时不会继续增加别的客户端支持了。</p>
+<p>还有另外一个重大更新，那就是TransClient 2.0支持添加很多人一直呼吁的<strong>局域网</strong>了！只需要在添加服务器的时候勾选上「是否为局域网」即可，同时请确保手机和要连接的客户端在同一个局域网内。如果对添加的外网的服务器有安全性的担忧，可以只添加局域网。</p>
+<p>此外，还增加了两个小功能。</p>
+<ul>
+<li>可以切换数据单位，比如 GB 可以切换为 GiB</li>
+<li>可以在服务器列表页展示所有下载服务器的<strong>即时速度</strong></li>
+</ul>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/06/IMG_6285.jpg" alt=""></p>
+<p>这两个功能需要在「<strong>个人主页-&gt;系统设置</strong>」中开启。</p>
+<p>欢迎大家点击下方的小程序进行体验，如果没有以上提到的功能，可以删除小程序后重新进入。</p>
+<h2 id="TransClient挣了多少钱"><a href="#TransClient挣了多少钱" class="headerlink" title="TransClient挣了多少钱"></a>TransClient挣了多少钱</h2><p>很多人关心的一个问题，TransClient挣钱了么？确实挣钱了，但它到现在依旧还是赔钱的。</p>
+<p>TransClient 其实诞生于2019年的7月份，这一年我重新又玩起了PT，但这么多年过去了，仍然没有一款让人满意的支持多个下载客户端的远程管理工具，于是我注册了一个小程序，准备自己写一个这样的工具。</p>
+<p>注册完之后，就一直蹉跎到2020年。这一年最开始的几个月里开始了一场始料未及的远程办公生活。于是我一边上班，一边抽时间写小程序的代码。在写代码之前还写了原型图，同时请别人做了设计稿。</p>
+<p>终于在一个月之后的 4 月 19 号，TransClient上线了。</p>
+<p>上线之后，我把这一篇文章发到了PT吧、少数派、什么值得买、Telegram频道还有小众软件。所有的用户都是来自于这些渠道。</p>
+<p>在小程序上架后的一个星期里，很快就积累了1000的 UV（独立访客），达到了小程序开通流量主的条件，可以在小程序中添加腾讯随机分发的广告了。当时的我很激动，天真地以为已经掌握了财富自由的密码。</p>
+<p>这些分发的广告一般都比较丑陋和碍眼，有些广告放到小程序里连我自己都没办法忍受。于是我只在两个二级页面不起眼的地方加上了广告。结果就导致到现在很多人还会问我，为啥自己看不到广告。哈哈哈。</p>
+<p>在加了广告之后，小程序每天的收入大概是这样的：</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/06/IMG_6322.jpg" alt=""></p>
+<p>所以，自从可以接入广告之后，我更能理解那些在产品中加广告的开发者了。我把手机里屏蔽广告的软件关掉，而且如果看到自己喜欢的产品，也会顺手帮忙去点一下广告，虽然我这个点击可能只有几分钱。</p>
+<p>在更新了2.0之后，我在小程序的系统设置中加入了一个激励视频广告，本意是不想大家都去开启这个功能，结果第二天的广告收入却出乎意料，对我来说简直是一笔巨款。第二天的广告收入是这样的：</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/06/IMG_6294.jpg" alt="-w390"><span class="img-caption">-w390</span></p>
+<p>与此同时还有很多人主动的给我点击广告或者赞赏，真的感谢你们。是你们的鼓励和支持给我了继续做下去的动力。</p>
+<p>接下来，我就把我这段时间以来的收支情况公布一下。</p>
+<h3 id="收入"><a href="#收入" class="headerlink" title="收入"></a>收入</h3><ol>
+<li><p>赞赏收入：¥142<br><img src="http://nas.bjchina.top:10000/images/2020/06/06/15913729903882.jpg" alt=""></p>
+</li>
+<li><p>腾讯流量主广告收入： ¥25.82</p>
+</li>
+</ol>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/06/15913731272218.jpg" alt=""></p>
+<h3 id="支出"><a href="#支出" class="headerlink" title="支出"></a>支出</h3><ol>
+<li>设计稿 ¥1300</li>
+<li>云开发服务器 ¥47.78</li>
+</ol>
+<p><img src="http://nas.bjchina.top:10000/images/2020/06/06/IMG_6323.jpg" alt=""></p>
+<ol start="3">
+<li>各类封面图： ¥39.6</li>
+</ol>
+<p>所以，在不计算我自己的人力成本的基础上的总收入为 <strong>¥-1219.56</strong>。<br>有没有出乎你的意料呢？</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>晒这些收支的目的不是为了网络乞讨，我有自己的工作，工资也足够养活我自己。我只是为了跟大家分享一下第一次尝试独立开发的一个普通开发者的经历。虽然结果跟预期的还是有差距，TransClient 在很多大牛眼里依旧是一个不起眼的小透明，但是收获的鼓励和支持，足够我坚持把它越做越好。PT 圈里有一句话: All for one and one for all。TransClient 算是我为大家做的一点微不足道的贡献吧。</p>
+<p>最后，感谢这期间对 TransClient 帮助过和赞赏过的各位，我爱你们！</p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/06/14/%E8%BF%BD%E9%9A%8F%E3%80%8A%E7%99%BD%E6%97%A5%E6%A2%A6%E6%83%B3%E5%AE%B6%E3%80%8B%E7%9A%84%E8%84%9A%E6%AD%A5%EF%BC%8C%E6%9D%A5%E4%B8%80%E5%9C%BA%E8%82%86%E6%84%8F%E7%9A%84%E5%86%B0%E5%B2%9B%E5%86%92%E9%99%A9/">
+        上一篇<br>追随《白日梦想家》的脚步，来一场肆意的冰岛冒险
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/06/07/%E7%BB%99%E7%A1%AC%E7%9B%98%E9%87%8C%E7%9A%84%E5%B0%8F%E5%A7%90%E5%A7%90%E5%AE%89%E4%B8%80%E4%B8%AA%E5%AE%B6%20%EF%BD%9C%20%E5%A6%82%E4%BD%95%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83/">
+        下一篇<br>给硬盘里的小姐姐安一个家 ｜ 如何打造一个属于自己的多媒体中心
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?49099302"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

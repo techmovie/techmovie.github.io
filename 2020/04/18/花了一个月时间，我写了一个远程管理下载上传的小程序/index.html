@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>花了一个月时间，我写了一个远程管理下载上传的小程序 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="产品经理、前后端一手包办">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?90608864">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/04/19/2.jpg')">
+                <div class="post-title">
+                    花了一个月时间，我写了一个远程管理下载上传的小程序
+                    <div class="post-meta">
+                        <time datetime="2020-04-18T16:30:15.000Z" itemprop="datePublished">
+                            2020-04-19 00:30
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/小程序/'>小程序</a>, 
+                        
+                        <a href='/tags/qBittorrent/'>qBittorrent</a>, 
+                        
+                        <a href='/tags/Transmission/'>Transmission</a>, 
+                        
+                        <a href='/tags/Deluge/'>Deluge</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>由于众所周知的原因，对于使用 qBittorrent、Transmission 等 BitTorrent 客户端的用户来说,ios上一直没有一个可以远程管理下载的工具。对于已经习惯了移动端掌控一切的我们来说，在手机上访问一个没有经过适配的PC网页这种事情实在是难以忍受。</p>
+<p>好在，通过小程序可以解决这个问题。</p>
+<p>在写了人生中第一个原型图，业余时间撸了一个月前后端的代码后，TransClient 这个小程序就这么诞生了。大家可以点击文末的小程序进行体验。</p>
+<h2 id="TransClient是做什么的"><a href="#TransClient是做什么的" class="headerlink" title="TransClient是做什么的"></a>TransClient是做什么的</h2><p>简单来说，它是一个远程管理下载上传的工具。</p>
+<p>目前可以支持 qBittorrent、Transmmison、Deluge 这三个客户端。</p>
+<p>你可以通过TransClient添加种子文件或链接到这三个客户端进行下载，同时可以查看下载进度、上传和下载速度，以及进行删除、暂停等操作。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/IMG_6060.jpg" alt=""></p>
+<p>你可以在下班路上通过 TransClient 添加一个美剧的种子文件或 torrent 链接到家里的 qBittorrent 客户端，回到家就可以在沙发上观赏下载好的美剧了。</p>
+<p>需要注意的是，TransClient 默认跳转到下载服务器列表，只有添加一个可用的下载服务器，才能正常使用小程序里的各项功能。</p>
+<h2 id="下载服务器是什么"><a href="#下载服务器是什么" class="headerlink" title="下载服务器是什么"></a>下载服务器是什么</h2><p>下载服务器其实是指可以远程访问的BT客户端，QB/TR/DE都提供了远程访问的能力，这些客户端可以安装在家里的NAS里，也可以安装在你购买的某个服务器里。只要确保这些客户端外网可以访问，那么就可以添加到小程序的下载服务器列表，然后就可以对客户端内的种子文件进行各种操作了。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/6dab59f96886c9cbb93f031e3e862088.jpg" alt=""></p>
+<p>添加下载服务器需添加服务器对应的域名或 IP 以及端口号，如果设置有账号或者密码还需输入对应的账号密码。三个客户端里，Deluge 只需输入登录密码即可，而 qBittorrent 的账户和密码是必填的。输入完毕后，点击测试服务器，如果服务器可以正常连接的话，就可以添加到自己的下载服务器列表了。</p>
+<h2 id="我该如何添加一个下载？"><a href="#我该如何添加一个下载？" class="headerlink" title="我该如何添加一个下载？"></a>我该如何添加一个下载？</h2><p>添加完服务器后可以到服务器的种子列表页，也就是 TransClient 的首页，点击页面右下角的添加按钮，然后就可以添加下载了。</p>
+<p>添加种子的方式有两种，一种是种子链接，另一种是种子文件。由于微信小程序的限制，只能从微信对话中选择文件，无法从手机的文件系统直接选择。添加完种子后还可以进行下载上传限速等操作，目前只有 Transmmison 是没办法在添加种子的同时进行限速的。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/6290ed0fd809e3d3f228a6758dc2fa93.jpg" alt=""></p>
+<p>接下来送上自问自答的QA环节。</p>
+<h3 id="为什么小程序的功能比桌面客户端少了很多"><a href="#为什么小程序的功能比桌面客户端少了很多" class="headerlink" title="为什么小程序的功能比桌面客户端少了很多"></a>为什么小程序的功能比桌面客户端少了很多</h3><p>以前会经常吐槽产品经理业务设计繁重交互复杂，在我自己尝试做一个原型图的时候才发现这个工作有多么难做，我面临最头疼的问题就是我想要的功能页面上放不下…</p>
+<p>手机上屏幕空间有限，页面承载的功能不能太复杂，在没有产生灵光一现的产品思路前，我只能先把一些必要的功能保留。待后续把逻辑整理一番后，会增加一些常用的操作，比如种子列表排序、更新种子Tracker等功能。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/43131ca3ef9a021e6f21a5a5770c1031.jpg" alt=""></p>
+<h3 id="为什么我下载服务器里明明有种子，但是种子列表里看不到"><a href="#为什么我下载服务器里明明有种子，但是种子列表里看不到" class="headerlink" title="为什么我下载服务器里明明有种子，但是种子列表里看不到"></a>为什么我下载服务器里明明有种子，但是种子列表里看不到</h3><p>TransClient默认展示活动中的种子，持续更新种子的状态和下载上传速度。如果想要查看所有的种子，可以点击页面底部的过滤按钮进行切换。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/e6a1cd933ad2314a48ce836faab786b1.jpg" alt=""></p>
+<h3 id="为什么我的Deluge在服务器列表里看不到统计数据"><a href="#为什么我的Deluge在服务器列表里看不到统计数据" class="headerlink" title="为什么我的Deluge在服务器列表里看不到统计数据"></a>为什么我的Deluge在服务器列表里看不到统计数据</h3><p>由于Deluge API的限制，需要在设置-&gt;Plugins里将WebUi一项勾选上。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/webui.jpg" alt=""></p>
+<h3 id="使用TransClient安全么？会不会泄漏我的账号密码？"><a href="#使用TransClient安全么？会不会泄漏我的账号密码？" class="headerlink" title="使用TransClient安全么？会不会泄漏我的账号密码？"></a>使用TransClient安全么？会不会泄漏我的账号密码？</h3><p>在添加服务器之后，会把下载服务器的信息进行AES加密，数据库里不会保存任何跟自己服务器有关的明文信息，除了服务器别名和是否为默认服务器这两个参数。同时，TransClient使用的小程序的云开发，服务器信息也不会暴露在外部的接口请求中。即便有人拿到了加密后的服务器信息，没有密钥他也是没办法解开的。</p>
+<h3 id="遇到bug或者想要某项功能应该如何反馈"><a href="#遇到bug或者想要某项功能应该如何反馈" class="headerlink" title="遇到bug或者想要某项功能应该如何反馈"></a>遇到bug或者想要某项功能应该如何反馈</h3><p>可以点击个人主页的「联系作者」按钮，向我反馈相关问题。如果遇到bug，建议通过「意见反馈」跟我沟通。</p>
+<h3 id="后续有什么规划"><a href="#后续有什么规划" class="headerlink" title="后续有什么规划"></a>后续有什么规划</h3><p>会支持更多的客户端，比如μTorrent、rTorrent；增加更多操作以及种子信息的展示，敬请期待吧。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/04/19/_-.png" alt=""></p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/05/03/%E5%AE%B6%E9%87%8C%E6%90%AD%E5%BB%BA%E4%BA%86%20NAS%20%E9%9C%80%E8%A6%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%EF%BC%9F%E8%BF%99%E5%87%A0%E4%B8%AA%E6%AD%A5%E9%AA%A4%E5%BE%88%E9%87%8D%E8%A6%81/">
+        上一篇<br>家里搭建了 NAS 需要远程访问？这几个步骤很重要
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/02/24/%E6%88%91%E7%9A%842010%E5%B9%B4%E4%BB%A3%EF%BC%9A%E8%A2%AB%E7%94%B5%E5%BD%B1%E5%BB%B6%E9%95%BF%E7%9A%84%E7%94%9F%E5%91%BD/">
+        下一篇<br>我的2010年代：被电影延长的生命
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?39012209"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

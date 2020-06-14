@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>2020 年了，为什么「蓝光」还让影迷心驰神往？ - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="久违的更新">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?34813876">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('http://nas.bjchina.top:10000/images/2020/02/17/46afe7c36f9e0e4816295a143b6e68a8.jpg')">
+                <div class="post-title">
+                    2020 年了，为什么「蓝光」还让影迷心驰神往？
+                    <div class="post-meta">
+                        <time datetime="2020-02-17T15:32:04.000Z" itemprop="datePublished">
+                            2020-02-17 23:32
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/电影/'>电影</a>, 
+                        
+                        <a href='/tags/数码/'>数码</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>「蓝光」是一个离我们非常近，其实又有点远的词。对于一般观众来说，似乎总会在国内视频网站上看到它的身影——比高清、超清更高规格的那个分辨率叫做「蓝光」。</p>
+<p>而对于电影收藏者，蓝光的含义几乎完全不同——例如今年 1 月 8 日，《大腕》和《飞驰人生》的收藏版蓝光碟同时发售，而所有碟片在两个月前预售时就已被抢售一空。</p>
+<p>那么什么是蓝光碟，为什么它今天仍受到电影爱好者的如此追捧呢？希望这篇文章能给你一些答案。</p>
+<h2 id="蓝光光碟的发展历史"><a href="#蓝光光碟的发展历史" class="headerlink" title="蓝光光碟的发展历史"></a>蓝光光碟的发展历史</h2><p>说起 DVD，想必不是太年轻的读者都不会陌生。二十年前，每家每户都少不了 DVD 光碟，家长偶尔还会带我们一起逛出租碟片的音像店，捷克动画片、台湾偶像剧和香港电影的碟片曾充斥着我们的童年和少年时期。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/615r0001440po72osrr9.jpg" alt="当年看《古惑仔》看地热血沸腾"><span class="img-caption">当年看《古惑仔》看地热血沸腾</span></p>
+<p>但随着技术进步以及人们对画质的要求逐渐提高，DVD 的下一代存储格式也应运而生。而在历史上， DVD 的下一代光盘格式曾有两种，一种是我们今天要讨论的蓝光光碟（Blu-ray Disc），另一种则名为HD DVD （High Definition DVD），在二十一世纪的第一个 10 年，它们曾各占半壁江山。</p>
+<p>作为 DVD 之后的下一代光盘格式，蓝光光碟和 HD DVD 分别由索尼和东芝主导，一度处于你死我活的竞争关系。2006年，第一批 HD DVD 电影上市，好莱坞的六大电影制片厂中，环球电影只发行 HD DVD 影碟，而索尼影业旗下的哥伦比亚、福克斯以及迪士尼只支持蓝光影碟，华纳和派拉蒙则同时发行两种影碟。</p>
+<p>为了抢占市场，HD DVD 阵营选择高价拉拢电影制片厂。派拉蒙的高层曾透露过，HD DVD 阵营曾向派拉蒙支付 1 亿 5 千万美元，以取得派拉蒙一年半的 HD DVD 独占权。而索尼主导的蓝光阵营则有个天然优势——哥伦比亚就是索尼旗下的，而且哥伦比亚的经典影片的数量也比较多。因此在片源的竞争上，两大阵营暂时没有分出高下。然而如果要抢占市场，除了影碟，硬件播放设备也得要全面铺开才行，于是不久后，这场竞争的转折点出现了。</p>
+<p>2006 年底，索尼推出了支持蓝光碟播放的 PS3 游戏机。一瞬间，那些购买了 PS3 的人同时也拥有了一台蓝光播放器（而且是一台价格相对实惠的播放器），这一举动很快就带动了蓝光碟的销量节节攀升，把 HD DVD 远远地甩在了后面。到了 2008 年，随着电影制片厂转向索尼的蓝光阵营，百思买、沃尔玛等线下商店将 HD DVD 从商店下架，彼时还是线上影碟租赁店的 Netflix 也宣布不再增加用于出租的 HD DVD 影碟库存。最终，2008 年 2 月底，东芝宣布结束所有 HD DVD 相关业务，HD DVD 也就此退出了历史舞台。</p>
+<h2 id="蓝光不只是高清"><a href="#蓝光不只是高清" class="headerlink" title="蓝光不只是高清"></a>蓝光不只是高清</h2><p>蓝光光碟（Blu-ray Disc）采用波长 405 纳米的蓝色激光光束来进行读写操作，因而以蓝光命名。如上文所说，蓝光只是一种存储介质，而并非一种分辨率的格式，但视频网站总爱用它标榜画质，当然也是因为它如大家想象的那样「确实高清」。</p>
+<h3 id="蓝光碟的分辨率到了什么级别"><a href="#蓝光碟的分辨率到了什么级别" class="headerlink" title="蓝光碟的分辨率到了什么级别"></a>蓝光碟的分辨率到了什么级别</h3><p>DVD 时代，受限于 DVD 光碟的容量和显示设备，分辨率最高只有 480P。蓝光出现之后，单面双层的容量为50GB，于是分辨率相较于 DVD 有了很大的提升，达到了1080P。分辨率提升后，画面细节相较于 DVD 自然丰富了很多，即便在家里的电视上欣赏电影，也有了更好的沉浸感，可以更专注地享受光影带来的魅力。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/burn-blu-ray-with-blu-ray-burning-software-0.png" alt="蓝光碟的单面和双面的容量区别"><span class="img-caption">蓝光碟的单面和双面的容量区别</span></p>
+<p>要说 1080P 是曾经的 HD-DVD 达到过的高度，在今天的视频网站上也屡见不鲜，但是在甩开对手之后，2015 年蓝光光盘联盟推出了超高清蓝光光盘（Ultra HD Blu-ray，以下简称 「UHD 蓝光」），容量最高可达到100GB，支持分辨率为 3840×2160 的 4K UHD 视频（有关分辨率以及4K的介绍，可以参考我的另一篇文章怎样的视频算得上「高清」？这 3 个「率」很重要），帧速率最高每秒 60 帧，相较于的普通蓝光，画面质量又有了质的飞跃。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/2020-02-0511.31.19.png" alt="普通高清 vs 4K HDR"><span class="img-caption">普通高清 vs 4K HDR</span></p>
+<p>因为容量的增大，所以 UHD 蓝光能采用编码效率更好的 H.265 进行编码，相较于 H.264 大大减小了视频体积。得益于蓝光容量的增大，更多无损压缩的音频格式比如 PCM、杜比 TrueHD、DTS-HDMA 也越来越多地出现在蓝光中，进一步提升了观影体验。</p>
+<h3 id="除了高清，蓝光碟还带给我们这些"><a href="#除了高清，蓝光碟还带给我们这些" class="headerlink" title="除了高清，蓝光碟还带给我们这些"></a>除了高清，蓝光碟还带给我们这些</h3><h4 id="更加优秀的画面效果"><a href="#更加优秀的画面效果" class="headerlink" title="更加优秀的画面效果"></a>更加优秀的画面效果</h4><p>其实大多数人对高清的理解只停留在分辨率的层面，但是随着4K逐渐普及，UHD 蓝光不仅在分辨率上进行了提升，画面效果也越来越接近于人眼的真实体验，这个至关重要的因素就是 HDR。</p>
+<p>HDR 的含义是高动态范围成像，意味着图像或者视频的明暗差别更加明显。HDR 技术能够有效地展现不同曝光下的画面细节，色彩过渡更加自然，令画面更加真实，暗部细节也更加丰富。HDR 视频通常是通过捕捉更多的曝光信息再渲染成一个动态范围更广的视频。</p>
+<p>在 2016 年蓝光光盘联盟发布的在 UHD 蓝光标准中，要求支持 HDR10，并可选择支持杜比视界。这两个是 HDR 技术的两个标准。HDR10 是最常见的一个的 HDR 标准，它要求 10bit 色深和 BT.2020 色域，这意味着画面色彩过渡更加自然、画面精度更高以及画面色彩更丰富。与HDR10 相比，杜比视界支持高达 10000 尼特的亮度，而HDR最高为 1000 尼特，是后者的整整十倍；同时，杜比视界还支持 12bit 的色深。此外，杜比视界支持的视频内容包括逐帧元数据，它意味着杜比视界允许元数据一帧一帧地补充和适应 HDR 图像。所以杜比视界可以比 HDR10 更加精细地展示画面。</p>
+<p>但是，尽管杜比视界的显示效果更加优秀，授权费用却相当不菲，让很多厂商望而却步；而HDR10则是免费开源的标准，所以现在市面上看到的 HDR 基本都是 HDR10。下面两张对比图展示了杜比视界对标准动态范围图像的处理。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/dolby-vision-city-before.jpg" alt="杜比视界前"><span class="img-caption">杜比视界前</span></p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/dolby-vision-city-after.jpg" alt="杜比视界后"><span class="img-caption">杜比视界后</span></p>
+<h4 id="更丰富的独家内容"><a href="#更丰富的独家内容" class="headerlink" title="更丰富的独家内容"></a>更丰富的独家内容</h4><p>蓝光在各地发行的时候，正片会针对各个地区做不同处理，除了字幕和音轨的差异，有时候还会对画面内容做一些特殊处理。比如迪斯尼的部分台版蓝光会把影片中的一些英文内容替换为中文。</p>
+<p>而且不同版本的蓝光，画面质量也会因为码率或者胶片修复的质量不同而参差不齐。所以，会有人收藏喜爱的电影的 N 版修复版蓝光碟，直到收藏到一个满意的蓝光版本为止（由于不同蓝光碟的画质差异较小，因此下图用 DVD vs 2K 蓝光碟来对比画质）。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/68ec1ea8b5eeaf383a104e2659f6e0ea.png" alt="《机器人总动员》中美版和港版的差别"><span class="img-caption">《机器人总动员》中美版和港版的差别</span></p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/-DVD.png" alt="《黑炮事件》DVD"><span class="img-caption">《黑炮事件》DVD</span></p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/7f10be127ea693670fbb2c63aecfb779.png" alt="《黑炮事件》2K修复版蓝光"><span class="img-caption">《黑炮事件》2K修复版蓝光</span></p>
+<p>除了电影正片，一般还会有拍摄花絮、删减片段、幕后访谈、导演评论音轨等额外内容，部分电影还会在蓝光碟中加入导演剪辑版。比如《流浪地球》蓝光套装中，除了一张 BD-50 正片碟，还有一张 BD-25 的花絮碟，此外还包含 240 页剧本，120 页画册（含剧照、幕后、分镜、概念图）以及导演+制片的评论音轨；张艺谋的《英雄》上映版本为 93 分钟，而发行的韩版蓝光版本为 110 分钟，足足多了 17 分钟的内容。这些内容是没办法在电影院中看到的，很多人购买收藏蓝光也是因为能欣赏到更多更丰富的内容。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/5d0bf5134e64ca7dac01437d1faab5fc.jpg" alt="碟影传媒发行的《流浪地球》的蓝光内容"><span class="img-caption">碟影传媒发行的《流浪地球》的蓝光内容</span></p>
+<h2 id="如何购买和观赏蓝光碟"><a href="#如何购买和观赏蓝光碟" class="headerlink" title="如何购买和观赏蓝光碟"></a>如何购买和观赏蓝光碟</h2><h3 id="购买蓝光碟"><a href="#购买蓝光碟" class="headerlink" title="购买蓝光碟"></a>购买蓝光碟</h3><p>如果要查询一部电影的蓝光发行时间，可以到<a href="https://www.blu-ray.com/" target="_blank" rel="noopener">https://www.blu-ray.com/</a>进行查询，这个网站基本涵盖了几乎所有电影的蓝光信息。在这里你能查询到即将要发行的电影蓝光的发行时间、编码、分辨率、HDR标准、字幕和音频信息以及购买价格等等信息。所以它是很多电影发烧友必备的一个查询网站。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/2020-02-0512.27.52.png" alt="飞屋环游记即将发行的4K蓝光"><span class="img-caption">飞屋环游记即将发行的4K蓝光</span></p>
+<p>如果要购买蓝光碟，主要渠道还是亚马逊海淘，因为绝大部分的国外蓝光只在亚马逊上进行销售，而且价格相对于一张电影票来说算是相当昂贵了：一张普通蓝光需要 20 美元，而对应的 UHD 蓝光则需要在 40 美元左右。如果发行的这部电影的蓝光比较稀有，则价格还会更高。另外，蓝光碟的外盒包装也会存在质量差异，一般铁盒对影碟的保护要更好，价格也会比普通包装更高一些。</p>
+<p>国内比较方便的购买渠道就是淘宝，比较知名的蓝光发行商碟影传媒会发行一些国内外的经典影片，比如文章最开始提到的《大腕》和《飞驰人生》都是这家发行的。通常在正式发行前会进行预售，因为碟影传媒的蓝光基本都是限量发行，一般都会在预售阶段就会被抢购一空，成为绝版，因此有些制作精良的优秀电影还是有很高的收藏价值的。</p>
+<h3 id="欣赏蓝光碟"><a href="#欣赏蓝光碟" class="headerlink" title="欣赏蓝光碟"></a>欣赏蓝光碟</h3><p>欣赏蓝光碟前先要了解锁区的概念。为了防止盗版，蓝光通过划分区码来限定只能在某一地区播放。在中国大陆境内，发展初期本土蓝光播放器发展速度较缓，所以片源多由香港（A区）流入，并导致部分境外（港产、日产等A区机型为主）蓝光机进入市场；且因PS3（台版、港版、日版、美版、韩版等蓝光A区机型）的大规模普及，导致市售标记“C区”蓝光一般包含A、C区或者为全区。但是超高清蓝光没有区域限制。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/2880px-Blu-ray-regions_with_key.svg.png" alt="蓝光光盘区码分布图"><span class="img-caption">蓝光光盘区码分布图</span></p>
+<p>如果只是播放普通蓝光，SONY PS4、XBox One或者一台带有蓝光电脑光驱的电脑都可以胜任。但是如果要选购支持 4K UHD 的蓝光播放器，可供选择的就比较少了。索尼或者松下会是比较好的选择，价位大概需要在3000 到 6000 元左右，低于这个价位的基本不算真正意义的4K蓝光播放器。另外如果你恰好有一台 XBOX ONE S，也是可以播放 4K UHD 蓝光的。它应该是目前性价比最高的播放器。</p>
+<p>选购完支持4K的播放器之后还要选择一个同样支持4K以及符合HDR10或者杜比视界的电视。电视在购买过程中也要处处小心，虽然目前国内的4K电视都说自己支持HDR，但是符合HDR10标准的没有几个。购买前可以通过这个网站<a href="https://www.rtings.com/" target="_blank" rel="noopener">https://www.rtings.com/</a>查询自己想购买的电视型号的评分和HDR支持情况，避免被不良商家忽悠。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/2020-02-051.33.14.png" alt="索尼某款电视的评分"><span class="img-caption">索尼某款电视的评分</span></p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>最后还是想提一下国内视频网站上把蓝光当作分辨率的做法，无非就是提高了视频码率，然后就拿这个噱头来卖自家的会员，即便购买了会员享受到的「蓝光」也远远不及普通蓝光碟的画质。</p>
+<p>对于大多数人来说，购买蓝光碟还是一件门槛挺高的行为，但是有必要了解一些基础常识，避免被一些网站蒙骗。对于电影爱好者或者收藏爱好者来说，蓝光可以算是电影的终极追求了，收藏一些自己最爱电影的蓝光碟在家中，可以沉浸其中反复回味。</p>
+<p>不管你是哪种观众，希望这篇文章能帮助到同样爱电影的你。</p>
+<p><img src="http://nas.bjchina.top:10000/images/2020/02/17/46afe7c36f9e0e4816295a143b6e68a8.jpg" alt="我收藏的《黑炮事件》影碟，同样由碟影传媒发行"><span class="img-caption">我收藏的《黑炮事件》影碟，同样由碟影传媒发行</span></p>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/02/22/%E6%B5%81%E6%B0%B4%E8%B4%A6%E3%80%8D%E5%9C%A8%E5%8C%97%E4%BA%AC%E5%88%B0%E5%85%AC%E5%8F%B8%E5%A4%8D%E5%B7%A5%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9/">
+        上一篇<br>「流水账」在北京到公司复工的第一天
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/05/%E3%80%8C%E8%93%9D%E5%85%89%E7%A2%9F%E5%BD%B1%E3%80%8D%E8%BF%99%E4%B8%AA%E6%9C%88%E4%BD%A0%E5%B0%86%E8%83%BD%E7%9C%8B%E5%88%B0%E8%BF%99%E4%BA%9B%E7%83%AD%E9%97%A8%E7%94%B5%E5%BD%B1/">
+        下一篇<br>「蓝光碟影」这个月你将能看到这些热门电影
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?50286802"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>

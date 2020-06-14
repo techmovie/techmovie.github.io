@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <title>追随《白日梦想家》的脚步，来一场肆意的冰岛冒险 - iTechMovie</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Rick Lee">
+<meta name="description" content="看见世界，亲近彼此">
+<meta name="keywords" content="电影,数码,生活,前端,Movie,Tech">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="zaV6dafJjH4xO1zlGp644k-UjSyFcLEiFrlSRHHyHik" />
+    <meta name="google-site-verification" content="pT025miUedSE-AHqhPkj7E9r3us5ch_qQHUFnDwly4w" />
+    <meta name="baidu-site-verification" content="ALE89jUTZE" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?91871711">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var host = window.location.host;
+            var code = host === 'techmovie.xyz' ? 'f0b59bbcc4059c8be499357b24af0bd3' : 'd33f1a726d11de27b239d22d39f81380'
+            hm.src = "https://hm.baidu.com/hm.js?"+code;
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://techmovie.xyz">
+                首页
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                归档
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                关于我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/link/index.html">
+                友情链接
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iTechMovie
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iTechMovie</div>
+        <div class="single-column-header-subtitle">电影，数码，生活</div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iTechMovie
+        </div>
+        <div class="nav-subtitle">
+            光影人生
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            归档
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            关于我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/link/index.html">
+            友情链接
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/14/duo-mei-ti-zhong-xin-bing-dao-1.png')">
+                <div class="post-title">
+                    追随《白日梦想家》的脚步，来一场肆意的冰岛冒险
+                    <div class="post-meta">
+                        <time datetime="2020-06-14T10:49:59.000Z" itemprop="datePublished">
+                            2020-06-14 18:49
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/冰岛/'>冰岛</a>, 
+                        
+                        <a href='/tags/白日梦想家/'>白日梦想家</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>在电影《白日梦想家》中，主角 Walter Mitty 是一名在《生活》杂志工作了 16 年的胶片洗印经理，他没办法开口跟自己心仪的女同事表白，也没办法回击主管对他的奚落，但是他时常会放空自己做白日英雄梦。梦里的他座右铭是「爱冒险、勇敢、有创意」，他可以冲到即将爆炸的楼里把女同事的小狗救出来，并顺便为三条腿的小狗装上义肢，也可以跟自己的主管在街上大战三百回合。</p>
+<p>但是，《生活》杂志面临被并购的窘况，杂志需要做最后一期封面，他却找不到封面的胶片，而这张胶片的关键是找到一个在世界各地到处冒险的摄影师。</p>
+<p>于是他拿起行李箱，开始了一场比自己白日梦还要壮丽的冒险。</p>
+<p>看完《白日梦想家》后，被电影中的绝美风景击中。踌躇了五年之后，从来没有出过国的我，也决定挣脱现实的束缚，追随 Walter Mitty 的脚步，去冰岛来一场肆意的冒险。</p>
+<h2 id="NUUK"><a href="#NUUK" class="headerlink" title="NUUK"></a>NUUK</h2><p>Walter 穿越了大半个地球，降落在格陵兰岛一个只有两辆汽车的小机场 NUUK。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/0002.png" alt=""></p>
+<p>实际上这个是位于冰岛赫本附近的赫本机场。赫本是冰岛东部一个只有 2100 人的渔镇，虽然人少，但它已经算是东部第二大城镇。赫本三面环港，盛产龙虾，大部分国内和进口的龙虾都会在这里上岸，所以来到这里一定要吃一口龙虾。</p>
+<p>去赫本的当天，刚刚在冰河湖结束行程，便驱车赶往预订的赫本附近的民宿，来的路上还看到了冰岛马。头上的一撮毛是他们的特色，他们很喜欢跟人亲近，会跑到你身边来不停地点头，很是可爱。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01437.jpg" alt=""></p>
+<p>赫本机场在民宿和赫本小镇的中间，到了之后发现电影里的小红小蓝和出租汽车的小亭子已经没有了，机场里有几辆直升机正在维修。这个迷你的航站楼还跟电影中一摸一样，仿佛下一秒 Walter 会提着箱子从门口出来。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01432.jpg" alt=""></p>
+<h2 id="酒馆和直升机"><a href="#酒馆和直升机" class="headerlink" title="酒馆和直升机"></a>酒馆和直升机</h2><p>Walter 在机场租了一辆小红之后，到了一家酒馆寻找摄影师。这里他看到了女同事为他献上了一首大卫・鲍伊的《Space Oddity》，Walter 跳上了一架醉酒大汉驾驶的直升机。</p>
+<p>2018年，马斯克将自己的特斯拉送入太空，车上循环播放的也是这首《Space Oddity》。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/003.png" alt=""></p>
+<p>这个酒馆位于斯奈山半岛上的斯蒂斯基霍尔米。为了到这个不起眼的小镇，我们足足在路上开了12 个小时的车。和其他小镇一样，这里安静又悠闲，在街上吹着海风，看着颜色各异的小房子，你会觉得这才是生活该有的样子。</p>
+<p>这里的酒馆已经关闭，直升机停靠的地方是一个不小的港口，旁边有一个警局，我去问警察叔叔酒馆为什么会关闭，警察叔叔还邀请我一起喝咖啡。原来这个酒馆本来也不存在，当时是为了拍这部电影专门搭建的。我透过窗户往酒馆里看了几眼，里面已不再是酒吧的样子。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01865.jpg" alt=""></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01868.jpg" alt=""></p>
+<h2 id="小房子、自行车和大桥"><a href="#小房子、自行车和大桥" class="headerlink" title="小房子、自行车和大桥"></a>小房子、自行车和大桥</h2><p>Walter 乘直升机跳入大海，跟鲨鱼进行了一番搏斗，被渔船救起。但是依然没有找到摄影师，渔船带他在冰岛靠岸，他抢到了唯一的一辆自行车，奔向了下一个目的地。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/0005.png" alt=""></p>
+<p>在骑自行车的路上，经过了很多美景，我找到了其中的三个。</p>
+<p>红色小房子位于斯蒂斯基霍尔米到格伦达菲厄泽的路上，经过它的时候已经是晚上十一点钟，夜色还没降临。小房子的坐标是64.959204, -23.065281。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/15920404742452.jpg" alt=""></p>
+<p>而这张照片是在赫本镇出发继续往北走的路上拍到的，经纬度是 64.289402, -15.080161，拍摄那天的天气也跟电影里一样好。<br><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01448.jpg" alt=""></p>
+<p>而电影里一闪而过的大桥的经纬度是 63.931187, -20.649490，从塞尔福斯出发沿一号公路驾驶18公里就能赶到，冰岛有名的黄金圈以及火口湖就在塞尔福斯附近。大桥旁边是一个私人农场，很多牛羊在里面悠闲地散步、吃草。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/0007.png" alt=""></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01066.jpg" alt=""></p>
+<h2 id="滑板和旅馆"><a href="#滑板和旅馆" class="headerlink" title="滑板和旅馆"></a>滑板和旅馆</h2><p>Walter 遇到了一家人正在往车里收拾行李准备搬走，他从几个小孩手里换到了一个滑板，因为女同事的儿子也很喜欢滑板。他遇到一段连续下坡的山路，滑板派上了用场。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/p2533778357.jpg" alt=""></p>
+<p>这一段盘山公路的终点是冰岛东部的又一个海港小镇塞济斯菲厄泽，一路上有雪山有瀑布，如果能从这里踩着滑板一路滑下来简直太爽了。实际上也就在电影中可以体验到，这条路上有来来往往的车辆，开车需要特别小心。</p>
+<p>Walter 踩着滑板经过了一个小瀑布。现在这个瀑布旁边还专门开辟了一块空地用来停车，很是贴心。这个瀑布位于 65.236875, -14.108174。</p>
+<p>下来的时候还是阳光明媚，返程的时候这里已经起了大雾，飘起了小雪。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01516.jpg" alt=""></p>
+<p>Walter 滑到了山脚，到达了小镇的一个旅馆，现如今这个旅馆刷上了新颜色，现在是一家餐馆。点菜的时候跟店员展示了《白日梦想家》的截图，店员会心一笑，跟我说这里已经改变了很多。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01523.jpg" alt=""></p>
+<p>这个小镇就像一个世外桃源，四周的山上在六月依旧白雪皑皑，远处的云跟山上的雪融在一起，映在小镇中心的湖里。</p>
+<p>真想永远呆在这里。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01542.jpg" alt=""></p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01533.jpg" alt=""></p>
+<h2 id="手机短信"><a href="#手机短信" class="headerlink" title="手机短信"></a>手机短信</h2><p>Walter 在这里经历了一场火山喷发，又错过了站在直升机上近距离拍摄火山的摄影师。而这个时候，他的同事给他来了短信，主管需要他尽早回去。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/0008.png" alt=""></p>
+<p>这个地点位于冰岛另一个小镇博尔加内斯，到首都雷克亚未克需要一个小时车程。上图这个地点位于 64.533599, -21.932128。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01898.jpg" alt="一艘小船"><span class="img-caption">一艘小船</span></p>
+<h2 id="雪豹"><a href="#雪豹" class="headerlink" title="雪豹"></a>雪豹</h2><p>这一次 Walter 重新出发，去到了喜马拉雅。因为他得知他要找的摄影师正在山上拍摄雪豹。他翻山越岭，历经艰险见到了摄影师，终于知道了杂志的封面底片的去处，而此时此刻，摄影师也正好拍到了雪豹。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/0010.png" alt=""></p>
+<p>实际上这一段也是在冰岛拍摄的，并没有去到喜马拉雅。中途经过了一个瀑布，实际上是冰岛有名的斯科加瀑布。这条瀑布落差为 60 米，从前海岸线的陡峭岩石崖壁飞泻直下，旁边有海鸟来回翻腾，很是壮观。</p>
+<p><img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/2020/06/13/dsc01114.jpg" alt=""></p>
+<h2 id="多说几句"><a href="#多说几句" class="headerlink" title="多说几句"></a>多说几句</h2><p>电影中的摄影师发现雪豹后，并没有按下快门，他喃喃自语道：如果我个人喜欢一个时刻，我不喜欢相机让我分心，我只想沉浸在那个时刻，享受现在。</p>
+<p>有部电视剧里也有说：今天之所以区别于昨天，是因为昨天的感受依然留在我们心中。 </p>
+<p>这次出去，虽然很多时候都听不懂对方的语言，但我还是尽量地跟当地人多一些交流，而不是简单地打卡拍照走人，感受和了解当地的文化带给我的意义和简单的走马观光完全不一样。</p>
+<p>最后以 Walter 所在的《生活》杂志的 Slogan 做结尾，希望你我都能感受到生活的意义。</p>
+<blockquote>
+<p>TO SEE THE WORLD, THINGS DANGEROUS TO COME TO, TO SEE BEHIND WALLS, TO DRAW CLOSER, TO FIND EACH OTHER AND TO FEEL. THAT IS THE PURPOSE OF LIFE</p>
+</blockquote>
+
+                </div>
+            </div>
+            <section class="article-end"> 
+  <p>扫码关注公众号iTechMovie，不错过每一篇文章</p>
+  <img src="https://mweb-1258898299.cos.ap-beijing.myqcloud.com/qrcode.png" alt="iTechMovie">
+</section>
+            
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/06/07/%E4%B8%80%E4%B8%AA%E6%9C%88%E5%86%85%E6%88%91%E9%9D%A0%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8C%A3%E4%BA%86%E5%A4%9A%E5%B0%91%E9%92%B1%20--%20TransClient%202.0%E6%9B%B4%E6%96%B0%20/">
+        下一篇<br>一个月内我靠独立开发的小程序挣了多少钱
+    </a>
+    
+</nav>
+
+    
+            
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80ODA5My8yNDU5MA==">
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://techmovie.xyz">iTechMovie</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?34289125"></script>
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+  
+
+
+
+<script type="text/javascript">
+    (function (d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') {
+            return;
+        }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+
+
+</body>
+</html>
