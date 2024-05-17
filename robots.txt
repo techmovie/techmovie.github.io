@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /js/
+Allow: /style/
+Sitemap: https://techmovie.xyz/sitemap.xml
+Sitemap: https://techmovie.xyz/baidu_sitemap.xml
